@@ -1,12 +1,11 @@
-# 🤤 QUEEN-MIA-MD 18+ Adult Features
 <p align="center">
-<img src="https://raw.githubusercontent.com/toge012345/QUEEN-MIA-MD/main/Media/images/MIA-THUMB.jpg?token=GHSAT0AAAAAACWTLQTAPAB7F5BLF6XTDKPYZW5QUFA" />
+<img src="https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAKIO46WHT6Q5MQYN4ZXBDOZQ" />
 </p>
-<h2> IS BEING UPDATE MY DAWN 🍑</h2></h2>
-<h3 align="center">A Simple WhatsApp Bot 🤤💦</h3>
+<h2> IS UPDATE ANNA-MD</h2></h2>
+<h3 align="center">A Simple WhatsApp Bot</h3>
 
 <p align="center">
-    <strong>QUEEN-MIA-MD</strong> is a WhatsApp bot made to automate tasks on WhatsApp.
+    <strong>QUEEN-ANNA-MD</strong> is a WhatsApp bot made to automate tasks on WhatsApp.
 </p>
 
 <p align="center">
@@ -21,9 +20,11 @@
 ---
 
 ### a little about this bot
-- ✔️ | **Simple** 
-- ✔️ | **18+ Adult Video Downloader** 
-- ✔️ | **Multi Device** 
+- ✔️ | **LOGO CMD** 
+- ✔️ | **download songs** 
+- ✔️ | **AI CHATBOT**
+- ✔️ | **NSFW CMD**
+- ✔️ | **Multi Device**   
 ---------
 
 ## Deployments Support 💦
