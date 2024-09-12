@@ -10,7 +10,7 @@ import cfonts from 'cfonts';
 
 const { say } = cfonts;
 
-say("XLICON - V2", {
+say("ANNA - MD", {
   'font': "block",
   'align': "center",
   'colors': ['#ff9900'],
@@ -21,7 +21,7 @@ say("XLICON - V2", {
   'maxLength': '15'
 });
 
-say("Xlicon-BOT-V2 By Salman._.", {
+say("QUEEN-ANNA By toge012345._.", {
   'font': "chrome",
   'align': "center",
   'colors': ["red", "magenta"],
@@ -81,7 +81,7 @@ async function start(scriptName) {
     if (exitCode === 0) return;
     fs.watchFile(scriptArgs[0], () => {
       fs.unwatchFile(scriptArgs[0]);
-      start("XLICON.js");
+      start("ANNA-MD.js");
     });
   });
 
@@ -89,7 +89,7 @@ async function start(scriptName) {
     console.error(chalk.red(`Error: ${err}`));
     childProcess.kill();
     isRunning = false;
-    start('XLICON.js');
+    start('ANNA-MD.js');
   });
 
   const pluginsDir = path.join(path.dirname(currentScriptPath), "plugins");
@@ -110,17 +110,17 @@ async function start(scriptName) {
   });
 }
 
-start('XLICON.js');
+start('ANNA-MD.js');
 
 
 process.on("unhandledRejection", () => {
   console.error(chalk.red("Unhandled promise rejection. Bot will restart..."));
-  start("XLICON.js");
+  start("ANNA-MD.js");
 });
 
 
 process.on("exit", exitCode => {
   console.error(chalk.red(`Exited with code: ${exitCode}`));
   console.error(chalk.red("Bot will restart..."));
-  start("XLICON.js");
+  start("ANNA-MD.js");
 });
