@@ -576,10 +576,10 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "XLICON-V2",
+                        title: "QUEEN-ANNA",
                         body: "welcome to our Group",
                         thumbnailUrl: welcomeApiUrl,
-                        sourceUrl: 'https://chat.whatsapp.com/C4ivwZKuh5bLJkqfYNPQsk',
+                        sourceUrl: 'https://chat.whatsapp.com/ImTWcze3fYm3NzROlbymX1',
                         mediaType: 1,
                         renderLargerThumbnail: true
                         }}})
@@ -629,10 +629,10 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "XLICON-V2 BOT",
+                        title: "QUEEN-ANNA",
                         body: "Goodbye from our Group",
                         thumbnailUrl: leaveApiUrl,
-                        sourceUrl: 'https://chat.whatsapp.com/BfH0KLkICn2BjmGFMRcGMW',
+                        sourceUrl: 'https://chat.whatsapp.com/ImTWcze3fYm3NzROlbymX1',
                         mediaType: 1,
                         renderLargerThumbnail: true
                         }}})
@@ -860,6 +860,6 @@ global.dfail = (type, m, conn) => {
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
     unwatchFile(file)
-    console.log(chalk.redBright("Update handler.js"))
+    console.log(chalk.redBright("Update ANNA.js"))
     if (global.reloadHandler) console.log(await global.reloadHandler())
 })
