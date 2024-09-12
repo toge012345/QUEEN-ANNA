@@ -364,7 +364,7 @@ async function connectionUpdate(update) {
     try {
       conn.logger.info(await global.reloadHandler(true))
     } catch (error) {
-      console.error('Error reloading handler:', error)
+      console.error('Error reloading ANNA:', error)
     }
   }
   if (code && (code === DisconnectReason.restartRequired || code === 428)) {
@@ -394,10 +394,10 @@ async function connectionUpdate(update) {
 process.on('uncaughtException', console.error)
 
 let isInit = true
-let handler = await import('./ANNA-MD.js')
+let handler = await import('./ANNA.js')
 global.reloadHandler = async function (restatConn) {
   try {
-    const Handler = await import(`./ANNA-MD.js?update=${Date.now()}`).catch(console.error)
+    const Handler = await import(`./ANNA.js?update=${Date.now()}`).catch(console.error)
     if (Object.keys(Handler || {}).length) handler = Handler
   } catch (error) {
     console.error
