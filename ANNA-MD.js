@@ -103,7 +103,7 @@ async function gandu() {
       process.exit(1)
     } else {
       console.log(`${endi}`)
-      console.log(chalk.bgBlack(chalk.redBright('initializing Guru Bot')))
+      console.log(chalk.bgBlack(chalk.redBright('initializing ANNA-MD')))
     }
   } catch (error) {
     console.error('Error:', error)
@@ -277,7 +277,7 @@ if (pairingCode && !conn.authState.creds.registered) {
 
     if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
       console.log(
-        chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 62xxx"))
+        chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 241xxx"))
       )
       process.exit(0)
     }
@@ -289,7 +289,7 @@ if (pairingCode && !conn.authState.creds.registered) {
 
     if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
       console.log(
-        chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 62xxx"))
+        chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 241xxx"))
       )
 
       phoneNumber = await question(
@@ -379,7 +379,7 @@ async function connectionUpdate(update) {
   if (connection === 'open') {
     const { jid, name } = conn.user
 
- const msg = `Hai🤩${name} Congrats you have successfully deployed xlicon-v2-BOT\nJoin my support Channel for any Query\n https://whatsapp.com/channel/0029VaMGgVL3WHTNkhzHik3c`
+ const msg = `Hai🤩${name} Congrats you have successfully deployed QUEEN-ANNA-MD\nJoin my support Channel for any Query\n https://whatsapp.com/channel/0029VaiuD4s4IBhI0fzbv40Z`
 
     await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
     
@@ -394,10 +394,10 @@ async function connectionUpdate(update) {
 process.on('uncaughtException', console.error)
 
 let isInit = true
-let handler = await import('./handler.js')
+let handler = await import('./ANNA-MD.js')
 global.reloadHandler = async function (restatConn) {
   try {
-    const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
+    const Handler = await import(`./ANNA-MD.js?update=${Date.now()}`).catch(console.error)
     if (Object.keys(Handler || {}).length) handler = Handler
   } catch (error) {
     console.error
