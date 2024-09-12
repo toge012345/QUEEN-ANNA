@@ -1,6 +1,6 @@
 {
-    "name": "Xlicon-v2",
-    "version": "2.0.0",
+    "name": "QUEEN-ANNA",
+    "version": "1.0.0",
     "description": "Advanced WhatsApp Bot",
     "main": "index.js",
     "type": "module",
@@ -25,16 +25,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/salmanytofficial/XLICON-V2-MD",
+    "homepage": "https://github.com/toge012345/QUEEN-ANNA",
     "author": {
         "name": "GURU"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/salmanytofficial/XLICON-V2-MD.git"
+        "url": "git+https://github.com/toge012345/QUEEN-ANNA.git"
     },
     "bugs": {
-        "url": "https://github.com/salmanytofficial/XLICON-V2-MD/issues"
+        "url": "https://github.com/toge012345/QUEEN-ANNA/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
