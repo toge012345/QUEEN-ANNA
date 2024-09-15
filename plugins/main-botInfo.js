@@ -56,15 +56,15 @@ let infobt = `
 ▢ *${chats.length}* Total Chats
 
 *≡ OWNER*
-  *ABHISHEK SURESH*
+  *𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸*
 ▢ Instagram :
-  • https://instagram.com/abhishek_ser
+  • https://instagram.com/lawliet.kfx
 ▢ GitHub :
-  • https://github.com/AbhishekSuresh2
+  • https://github.com/toge012345
 ▢ Telegram : 
-  • https://t.me/Abhishek_Ser  
+  • https://t.me/lawliet_kfx  
 ▢ YouTube : 
-  • https://youtube.com/@comedymelodych8468
+  • https://youtube.com/@kenzo3146
 
  *≡ S E R V E R*
 *🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
