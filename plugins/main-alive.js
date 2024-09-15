@@ -6,8 +6,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   let mainImg = "https://replicate.delivery/pbxt/QbP6Fh3ZXwKON9SCB70ERGwwgeeSbztwKIOIzhUeXFkwnFHiA/out.png"; // Main image URL
   let smallImg = "https://replicate.delivery/pbxt/QbP6Fh3ZXwKON9SCB70ERGwwgeeSbztwKIOIzhUeXFkwnFHiA/out.png"; // Small image URL
   let smallText = "I'M Alive Now"; // Small text
-  let mainText = "𝙰𝙱𝙷𝙸𝚂𝙷𝙴𝙺-𝚂𝙴𝚁"; // Main text
-  let audioUrl = "https://raw.githubusercontent.com/AbhishekSuresh2/ABHISHEK-SER/main/src/mp3/Abhi.mp3"; // Audio URL
+  let mainText = "𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰"; // Main text
+  let audioUrl = "https://github.com/toge012345/QUEEN-ANNA/blob/main/Assets/ALIVE.mp3"; // Audio URL
   // Construct the message
   let con = {
     key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) },
@@ -26,14 +26,14 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     mimetype: 'audio/mp4',
     ptt: true,
     waveform: [100, 0, 100, 0, 100, 0, 100],
-    fileName: "ABHISHEK-SER",
+    fileName: "𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰",
     contextInfo: {
       mentionedJid: [m.sender],
       externalAdReply: {
         title: smallText,
         body: mainText,
         thumbnailUrl: smallImg, // Small image
-        sourceUrl: 'https://github.com/AbhishekSuresh2/ABHISHEK-SER',
+        sourceUrl: 'https://github.com/toge012345/QUEEN-ANNA',
         mediaType: 1,
         renderLargerThumbnail: false,
         mediaUrl: mainImg // Main image
