@@ -1,4 +1,4 @@
-//ABRAHAM DWAMENA
+//ANNA-MD
 import { performance } from 'perf_hooks';
 
 // This function is used to prevent users from sending too many messages in a chat application or bot.
