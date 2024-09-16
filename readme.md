@@ -71,12 +71,11 @@ For a more hands-on approach, deploy using Termux on Android for local control a
 Deploy using the Pterodactyl panel for an intuitive interface to manage multiple servers easily.
 
 
-## REGARDS
+#
 
 
-╭━━━┳━╮╱╭┳━╮╱╭┳━━━╮
-┃╭━╮┃┃╰╮┃┃┃╰╮┃┃╭━╮┃
-┃┃╱┃┃╭╮╰╯┃╭╮╰╯┃┃╱┃┃
-┃╰━╯┃┃╰╮┃┃┃╰╮┃┃╰━╯┃
-┃╭━╮┃┃╱┃┃┃┃╱┃┃┃╭━╮┃
-╰╯╱╰┻╯╱╰━┻╯╱╰━┻╯╱╰╯
+
+╔══╦═╦╦═╦╦══╗
+║╔╗║║║║║║║╔╗║
+║╠╣║║║║║║║╠╣║
+╚╝╚╩╩═╩╩═╩╝╚╝
