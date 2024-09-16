@@ -46,7 +46,6 @@ break;
 ┃➣🗂️ _${usedPrefix}groups_
 ┃➣🗂️ _${usedPrefix}blocklist_
 ┃➣🗂️ _${usedPrefix}listprem_
-┃➣    *_XLICON-V2_*
 ┗━━━ʕ•㉨•ʔ━━━┛`; // Your bot menu message here
           break;
         case 'ownermenu':
