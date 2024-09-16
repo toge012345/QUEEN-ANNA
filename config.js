@@ -56,7 +56,7 @@ global.dygp = 'https://chat.whatsapp.com/GpsTju4MUAbJmmZhHU8zAR'
 global.fgsc = 'https://github.com/toge012345/QUEEN-ANNA' 
 global.fgyt = 'https://youtube.com/@kenzo3146'
 global.fgpyp = 'https://youtube.com/@kenzo3146'
-global.fglog = 'https://replicate.delivery/pbxt/QbP6Fh3ZXwKON9SCB70ERGwwgeeSbztwKIOIzhUeXFkwnFHiA/out.png' 
+global.fglog = 'ANNA.jpg' 
 
 //imagen
 global.imagen1 = fs.readFileSync('./Assets/ANNA.jpg')
