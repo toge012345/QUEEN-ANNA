@@ -71,14 +71,6 @@ For a more hands-on approach, deploy using Termux on Android for local control a
 Deploy using the Pterodactyl panel for an intuitive interface to manage multiple servers easily.
 
 
-#
-
-
-
-    _   _  _ _  _   _   
-   /_\ | \| | \| | /_\  
-  / _ \| .` | .` |/ _ \ 
- /_/ \_\_|\_|_|\_/_/ \_\
-
-#
-                        
+# 🚨WARN🚨
+𝙢𝙮 𝙗𝙤𝙩 𝙞𝙨 𝙚𝙣𝙘𝙧𝙮𝙥𝙩𝙚𝙙 𝙖𝙣𝙙 𝙥𝙧𝙤𝙩𝙚𝙘𝙩𝙚𝙙 𝙗𝙮 𝙩𝙝𝙚 𝘼𝙥𝙖𝙘𝙝𝙚-2.0 𝙡𝙞𝙘𝙚𝙣𝙨𝙚.
+𝙢𝙤𝙙𝙞𝙛𝙮 𝙩𝙝𝙚 𝙊𝙥𝙚𝙣 𝙎𝙤𝙪𝙧𝙘𝙚 𝙖𝙗𝙞𝙨𝙝𝙚𝙧𝙠 𝙨𝙚𝙧.
