@@ -1,10 +1,10 @@
 {
-  "name": "whatsapp-bot (X-BOT)",
+  "name": "QUEEN-ANNA",
   "description": " Whatsapp bot.",
   "keywords": [
     "whatsapp bot"
   ],
-  "repository": "https://github.com/salmanytofficial/XLICON-V2-MD/main",
+  "repository": "https://github.com/toge012345/QUEEN-ANNA",
   "stack": "container",
   "env": {
     "DATABASE_URL": {
@@ -21,6 +21,11 @@
       "description": "mode public or private",
       "required": true,
       "value": "public"
+    },
+    "OWNERS": {
+      "description": "Put your Number as Owner",
+      "required": true,
+      "value": "24105114159;𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸"
     },
     "PREFIX": {
       "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
