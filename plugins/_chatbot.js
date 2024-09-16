@@ -1,30 +1,68 @@
 import fetch from 'node-fetch';
-
-const BRAINSHOP_BID = '176023';
-const BRAINSHOP_KEY = 'LDSYmkI28NH1qFuN';
+import axios from 'axios';
 
 export async function before(m, { conn }) {
-  if (m.isBaileys && m.fromMe) {
-    return true;
+  try {
+    if (m.isBaileys && m.fromMe) {
+      return true;
+    }
+    
+    if (!m.isGroup) {
+      return false;
+    }
+
+    const users = global.db.data.users;
+    const chats = global.db.data.chats;
+
+    const user = global.db.data.users[m.sender];
+    const chat = global.db.data.chats[m.chat];
+    let name = conn.getName(m.sender)
+    if (m.mtype === 'protocolMessage' || m.mtype === 'pollUpdateMessage' || m.mtype === 'reactionMessage' || m.mtype === 'stickerMessage') {
+      return;
+    }
+
+    if (!m.msg   || !m.message || m.key.remoteJid !== m.chat || users[m.sender].banned || chats[m.chat].isBanned) {
+      return;
+    }
+
+    if (!m.quoted ||!m.quoted.isBaileys) return
+
+    if (!chat.chatbot) { 
+      return true;
+    }
+    
+    const msg = encodeURIComponent(m.text);
+    console.log(msg)
+    
+    const response = await axios.post('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyDJC5a882ruaC4XL6ejY1yhgRkN-JNQKg8', {
+        contents: [{
+          parts: [{
+            text: msg
+          }]
+        }]
+      });
+
+    const data = response.data;
+    if (data.candidates && data.candidates.length > 0) {
+        const candidate = data.candidates[0];
+      const content = candidate.content;
+
+      
+      let reply = content.parts[0].text; 
+      if (reply) {
+        reply = reply.replace(/Google/gi, 'Abraham And Salman');
+        reply = reply.replace(/a large language model/gi, botname);
+    
+    m.reply(reply);
+        }
+    
+      } else {
+        
+        m.reply("No suitable response from the API.");
+    
+      }
+  } catch (error) {
+    console.log(error);
+    
   }
-  
-  if (!m.isGroup) {
-    return false;
-  }
-  
-  const user = global.db.data.users[m.sender];
-  
-  if (!user.chatbot) {
-    return true;
-  }
-  
-  const uid = encodeURIComponent(m.sender);
-  const msg = encodeURIComponent(m.text);
-  
-  const response = await fetch(`http://api.brainshop.ai/get?bid=${BRAINSHOP_BID}&key=${BRAINSHOP_KEY}&uid=${uid}&msg=${msg}`);
-  const data = await response.json();
-  
-  const reply = data.cnt;
-  
-  m.reply(reply);
 }

@@ -2,7 +2,7 @@ import fg from 'api-dylux';
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args[0]) {
-    throw `🎯 Please Send The Link Of A Facebook Video\n\n📌 Example :\n*${usedPrefix + command}* Link Here`;
+    throw `✳️ Please send the link of a Facebook video\n\n📌 EXAMPLE :\n*${usedPrefix + command}* https://www.facebook.com/Ankursajiyaan/videos/981948876160874/?mibextid=rS40aB7S9Ucbxw6v`;
   }
 
   const urlRegex = /^(?:https?:\/\/)?(?:www\.)?(?:facebook\.com|fb\.watch)\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
@@ -15,7 +15,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
   try {
     const result = await fg.fbdl(args[0]);
     const tex = `
-⊱ ─── { *ABHI FBDL* } ─── ⊰
+⊱ ─── {* XLICON FBDL*} ─── ⊰
 ↳ *VIDEO TITLE:* ${result.title}
 ⊱ ────── {⋆♬⋆} ────── ⊰`;
 
@@ -32,8 +32,9 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 };
 
 handler.help = ['facebook <url>'];
-handler.tags = ['dl'];
+handler.tags = ['downloader'];
 handler.command = /^((facebook|fb)(downloder|dl)?)$/i;
 handler.diamond = true;
 
 export default handler;
+
