@@ -6,15 +6,27 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
+const ownervb = process.env.OWNERS;
+if (!ownervb){
+   throw new Error("OWNERS env is not set");
+}
 
-global.owner = [
-  ['24105114159', '𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸', true],
-  [''],
-  [''] 
-] //Number of owners
+const ownerlist = ownervb.split(';');
 
-global.mods = ['24105114159','24102150169'] 
-global.prems = ['24105114159', '24105114159', '24102150169']
+global.owner = [];
+for (let i = 0; i < ownerlist.length; i += 2) {
+    const owner = [
+        ownerlist[i],            
+        ownerlist[i + 1],         
+        true                        
+    ];
+    global.owner.push(owner);
+}
+
+//----------------------------------------------------------------------------
+
+global.mods = ['24105114159'] 
+global.prems = ['24105114159']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
