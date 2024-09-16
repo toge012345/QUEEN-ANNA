@@ -75,7 +75,10 @@ Deploy using the Pterodactyl panel for an intuitive interface to manage multiple
 
 
 
-╔══╦═╦╦═╦╦══╗
-║╔╗║║║║║║║╔╗║
-║╠╣║║║║║║║╠╣║
-╚╝╚╩╩═╩╩═╩╝╚╝
+    _   _  _ _  _   _   
+   /_\ | \| | \| | /_\  
+  / _ \| .` | .` |/ _ \ 
+ /_/ \_\_|\_|_|\_/_/ \_\
+
+#
+                        
