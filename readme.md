@@ -71,6 +71,12 @@ For a more hands-on approach, deploy using Termux on Android for local control a
 Deploy using the Pterodactyl panel for an intuitive interface to manage multiple servers easily.
 
 
-## Warning
+## REGARDS
 
-***this bot is for adults there are shocking scenes as well as -18 porn assets no children should see this you have been warned***
+
+╭━━━┳━╮╱╭┳━╮╱╭┳━━━╮
+┃╭━╮┃┃╰╮┃┃┃╰╮┃┃╭━╮┃
+┃┃╱┃┃╭╮╰╯┃╭╮╰╯┃┃╱┃┃
+┃╰━╯┃┃╰╮┃┃┃╰╮┃┃╰━╯┃
+┃╭━╮┃┃╱┃┃┃┃╱┃┃┃╭━╮┃
+╰╯╱╰┻╯╱╰━┻╯╱╰━┻╯╱╰╯
