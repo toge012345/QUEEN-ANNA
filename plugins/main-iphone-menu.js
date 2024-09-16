@@ -41,9 +41,9 @@ let str = `
   ཌ|━━🤖 _BOT STATUS:_🤖━━|ད
   ⚀------- *IPHONE-MENU* ------⚀
 
-┌─𐂅  *MADE BY XLICON*  𐂅
-| ❁✓  *Creator:* XLICON-TEAM
-| 🤖  *Bot Name:* XLICON-V2
+┌─𐂅  *𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸*  𐂅
+| ❁✓  *Creator:* 𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸
+| 🤖  *Bot Name:* 𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰
 | 💻  *Host:* Linux 🟩
 | 📣  *Prefix:* ${usedPrefix} 
 | 🕓  *Uptime:* ${uptime}
@@ -59,17 +59,12 @@ let str = `
 ┌─𐂅「 *👤USER* 」
 | 👾  *User Tag:* ${taguser} 
 | 😇  *Name:* ${name} 
-| ✰  *Master Mind:* AB&SALMAN
+| ✰  *Master Mind:* 𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸
 | 💎  *Diamonds:* -9999
 | 🏆  *Rank:* ${role}
 | 🎮  *XP:* ${exp} 
 ╰───────────────▶
 
- 
-┌─☛『 *_Fellowship_* 』☚
-┃❏*bible [chapter_number|chapter_name]
-❏*quran [surah_number|surah_name]
-╰─────────────────➢
 ┌─☛『 *_AI_* 』☚
 ┃❏*bingimg2
 ┃❏*chatgpt
