@@ -20,7 +20,7 @@ var handler = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 
   const cat = `𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰
 
-*_—🔰 𝐀𝐍𝐍𝐀 𝐃𝐄𝐕 wa.me/+24105114159
+🔰 𝐀𝐍𝐍𝐀 𝐃𝐄𝐕 wa.me/+24105114159
 *---------------------*
 
 _𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰_
