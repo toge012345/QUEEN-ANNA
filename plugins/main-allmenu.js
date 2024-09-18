@@ -544,7 +544,7 @@ let str = `
 ┌─➢『 *_conversion_* 』❖
 ┃❏*convert
 ╰─────────────────➢
-XLICON-𝙼𝙳-𝚅𝟸 𝙱𝚈 AB AND SALMAN`
+𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰 𝙱𝚈 𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸`
 
 
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, null, rpyt)
@@ -553,7 +553,7 @@ XLICON-𝙼𝙳-𝚅𝟸 𝙱𝚈 AB AND SALMAN`
 }
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu1', 'imenu'] 
+handler.command = ['allmenu', 'all'] 
 
 export default handler
 function clockString(ms) {
