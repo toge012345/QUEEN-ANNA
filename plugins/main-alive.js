@@ -3,11 +3,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
    let name = m.pushName || conn.getName(m.sender);
   
   // Define the content
-  let mainImg = "https://replicate.delivery/pbxt/QbP6Fh3ZXwKON9SCB70ERGwwgeeSbztwKIOIzhUeXFkwnFHiA/out.png"; // Main image URL
-  let smallImg = "https://replicate.delivery/pbxt/QbP6Fh3ZXwKON9SCB70ERGwwgeeSbztwKIOIzhUeXFkwnFHiA/out.png"; // Small image URL
+  let mainImg = "https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg"; // Main image URL
+  let smallImg = "https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg"; // Small image URL
   let smallText = "I'M Alive Now"; // Small text
   let mainText = "𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰"; // Main text
-  let audioUrl = "https://github.com/toge012345/QUEEN-ANNA/blob/main/Assets/ALIVE.mp3"; // Audio URL
+  let audioUrl = "https://a.uguu.se/CRCgDeVp.mp3"; // Audio URL
   // Construct the message
   let con = {
     key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) },
