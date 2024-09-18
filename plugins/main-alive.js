@@ -1,52 +1,41 @@
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-  //To get sender's name
-   let name = m.pushName || conn.getName(m.sender);
-  
-  // Define the content
-  let mainImg = "https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg"; // Main image URL
-  let smallImg = "https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg"; // Small image URL
-  let smallText = "I'M Alive Now"; // Small text
-  let mainText = "𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰"; // Main text
-  let audioUrl = "https://a.uguu.se/CRCgDeVp.mp3"; // Audio URL
-  // Construct the message
-  let con = {
-    key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) },
-    message: {
-      contactMessage: {
-        displayName: `${name}`, // Replace with the desired display name
-        vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
-      }
+
+
+let handler = async(m, { conn, text, usedPrefix, command }) => {
+
+    // Sound
+    let name = m.pushName || conn.getName(m.sender)
+    var vn = "./Assets/ALIVE.mp3"
+    let url = "https://github.com/toge012345"
+    let murl = "https://youtube.com/@kenzo3146?si=_v7ZRTjkqmLKt0HK"
+    let img = "https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg"
+    let con = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '24105114159@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+    let doc = {
+        audio: {
+          url: vn
+        },
+        mimetype: 'audio/mp4',
+        ptt: true,
+        waveform:  [100, 0, 100, 0, 100, 0, 100],
+        fileName: "Guru",
+    
+        contextInfo: {
+          mentionedJid: [m.sender],
+          externalAdReply: {
+          title: "*QUEEN ANNA IS ALIVE 🌟*",
+          body: "𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰",
+          thumbnailUrl: img,
+          sourceUrl: 'https://chat.whatsapp.com/GpsTju4MUAbJmmZhHU8zAR',
+          mediaType: 1,
+          renderLargerThumbnail: true
+          }}
+      };
+    
+      await conn.sendMessage(m.chat, doc, { quoted: con });
+    
     }
-  };
+    
+    handler.help = ['alive']
+    handler.tags = ['main']
+    handler.command = /^(alive)$/i 
 
-  let doc = {
-    audio: {
-      url: audioUrl
-    },
-    mimetype: 'audio/mp4',
-    ptt: true,
-    waveform: [100, 0, 100, 0, 100, 0, 100],
-    fileName: "𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰",
-    contextInfo: {
-      mentionedJid: [m.sender],
-      externalAdReply: {
-        title: smallText,
-        body: mainText,
-        thumbnailUrl: smallImg, // Small image
-        sourceUrl: 'https://github.com/toge012345/QUEEN-ANNA',
-        mediaType: 1,
-        renderLargerThumbnail: false,
-        mediaUrl: mainImg // Main image
-      }
-    }
-  };
-
-  // Send the message
-  await conn.sendMessage(m.chat, doc, { quoted: con });
-}
-
-handler.help = ['alive']
-handler.tags = ['main']
-handler.command = /^(alive)$/i
-
-export default handler;
+    export default handler;
