@@ -14,12 +14,8 @@ import fetch from "node-fetch";
 
 const defaultMenu = {
   before: `
-🌟✨ *Welcome to ${botname}* ✨🌟
-╭━━━⊱ 👤 *USER* 👤 ⊱━━━╮
-🖋️ *Name:* _%name_
-╰━━━━━━━━━━━━━━━━╯
-
 ╭━━━⊱ 🌐 *INFO* 🌐 ⊱━━━╮
+🧸 *User:* _%name_
 ⛑️ *Mode:* _%mode_
 📱 *Platform:* _%platform_
 💻 *Type:* _NodeJs_
@@ -32,11 +28,11 @@ const defaultMenu = {
 📢 *%ucpn*
 
 ╭━━━⊱ 🛠️ *INFO CMD* 🛠️ ⊱━━━╮ 
-│ 🔢 _*%totalfeatures* Commands_
+│ 🌀 _*%totalfeatures* Commands_
 ╰━━━━━━━━━━━━━━━╯
 %readmore
 `.trimStart(),
-  header: "╭━━━⊱ 🗂️ *%category* 🗂️ ⊱━━━╮",
+  header: "╭━━━⊱ 🛡️ *_%category_* 🛡️ ⊱━━━╮",
   body: "  │💬 _%cmd_ %isPremium %islimit",
   footer: "╰━━━━━━━━━━━━━━━━╯",
   after: "\n%me",
@@ -175,14 +171,14 @@ let handler = async (m, {
 
     let contact = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
 
-    conn.sendMessage(m.chat, { video: { url: menuvid }, caption: text.trim(), gifPlayback: true, gifAttribution: 0}, { quoted: m });
+    conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: text.trim(), gifPlayback: true, gifAttribution: 0}, { quoted: m });
 
   } catch (e) {
     await conn.reply(m.chat, " error", m);
     throw e;
   }
 }
-handler.command = /^(menu2|h2|hh|help2|\?)$/i;
+handler.command = /^(help|h2|allmenu|menu2|\?)$/i;
 
 export default handler;
 
