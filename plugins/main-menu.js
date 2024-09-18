@@ -513,79 +513,79 @@ const handler = async (m, { conn, command, text, args, usedPrefix }) => {
     },
   }
   const infoText = `
- ||   श्री   ||
-> ${botname}  」\n
-- Hii ${name} Senpai
-    
-- *${ucpn}* 
-   
-乂───『 *U S E R*』───乂
-⛥ *Name:* ${name}
-⛥ *Gold:* ${credit}
-⛥ *Role:* ${role}
-⛥ *Level:* ${level}
-⛥ *Xp:* ${exp}
-╰──────────⳹
-   
-乂───『 *I N F O*』───乂
-⛥ *Bot Name:* ${botname}
-⛥ *Mode:* ${mode}
-⛥ *Platform:* ${platform}
-⛥ *Type:* NodeJs
-⛥ *Baileys:* Multi Device
-⛥ *Prefix:* [ *${usedPrefix}* ]
-⛥ *Uptime:* ${muptime}
-⛥ *Database:*  ${totalreg}
-╰──────────⳹
-> © Guru Sensei\n\n
-${readMore}
-乂───『 *I N F O  C M D*』───乂 
-│ *${totalfeatures}* Commands
-╰──────────⳹
-     
-
-乂───『 *INFO*』───乂 
-│*Reply with the number*
-│ to get respected Menu*
-╰───────⳹
-╭───────⳹
-│ *1.* Bot Menu
-│ *2.* Owner Menu
-│ *3.* Group Menu
-│ *4.* Fun Menu
-│ *5.* Reaction Menu
-│ *6.* Downloader Menu
-│ *7.* Game Menu
-│ *8.* Logo Menu
-│ *9.* Sticker Menu
-│ *10.* Audio Menu
-│ *11.* News Menu
-│ *12.* Economy Menu
-│ *13.* Anime Menu
-│ *14.* NSFW Menu
-│ *15.* Tools Menu
-│ *16.* AI Menu
-│ *17.* Religion Menu
-│ *18.* Plugin Menu
-╰───────⳹
+  「 ${botname} 」\n
+  ┌─❖
+  │ *_Hi_* 👋 
+  └┬❖ *_${name}_* Senpai
+  ┌┤✑ *${ucpn}* 😄
+  │└────────────┈ ⳹
+  │
+  └─ 𝞑𝞗𝙏 𝞘𝞜𝙁𝞗
+  │𝐁𝐎𝐓 : ${botname}
+  │𝐌𝐨𝐝𝐞 : ${mode}
+  │𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : ${platform}
+  │𝐇𝐨𝐬𝐭 : Kali linux
+  │𝐓𝐲𝐩𝐞 : NodeJs
+  │𝐁𝐚𝐢𝐥𝐞𝐲𝐬 : Multi Device
+  │𝐏𝐫𝐞𝐟𝐢𝐱 : [ *${usedPrefix}* ]
+  │𝐒𝐩𝐞𝐞𝐝 : 0.00001 miliseconds
+  │𝐑𝐮𝐧𝐭𝐢𝐦𝐞 : ${muptime}
+  │𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 : ${totalreg}
+  │  ${readMore}
+  └─ 𝙐𝙎𝞢𝞒 𝞘𝞜𝙁𝞗
+  │𝐍𝐚𝐦𝐞 : ${name}
+  │𝐆𝐨𝐥𝐝 : ${credit}
+  │𝐑𝐨𝐥𝐞 : ${role}
+  │𝐋𝐞𝐯𝐞𝐥 : ${level}
+  │𝐗𝐩 : ${exp}
+  │
+  └─ 𝞘𝞜𝙁𝞗 𝘾𝞛𝘿
+  │ *${totalfeatures}* Commands
+  │
+  └─ 𝞘𝞜𝙁𝞗 
+  │ *_Reply With the Number_*
+  │ *_To Get Respected Menu_*
+  │${readMore}
+  ┬────────────┈ ⳹
+  │✑  Please Reply *MENU Number*
+  │✑  Given *BELOW*
+┌──────────────┈ ⳹
+│ *1.*  ❏ Bot Menu
+│ *2.*  ❏ Owner Menu
+│ *3.*  ❏ Group Menu
+│ *4.*  ❏ Fun Menu
+│ *5.*  ❏ Reaction Menu
+│ *6.*  ❏ Downloader Menu
+│ *7.*  ❏ Game Menu
+│ *8.*  ❏ Logo Menu
+│ *9.*  ❏ Sticker Menu
+│ *10.* ❏ Audio Menu
+│ *11.* ❏ News Menu
+│ *12.* ❏ Economy Menu 
+│ *13.* ❏ Anime Menu 
+│ *14.* ❏ Coming Soon
+│ *15.* ❏ Tools Menu 
+│ *16.* ❏ Ai Menu 
+│ *17.* ❏ Plugin Menu 
+└─────────────────┈⳹
  `
   const { result, key, timeout } = await conn.sendMessage(
     m.chat,
-    { video: { url: menuvid }, caption: infoText.trim(),
+    { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: infoText.trim(),
     contextInfo: {
       mentionedJid: [m.sender],
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363178281296360@newsletter',
-        newsletterName: 'Click Here or u Gay',
+        newsletterJid: '120363168281296360@newsletter',
+        newsletterName: '𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰',
         serverMessageId: -1,
       },
       forwardingScore: 999,
       externalAdReply: {
-        title: 'ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ',
+        title: '𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰',
         body: 'ᴍᴇɴᴜ',
-        thumbnailUrl: 'https://i.pinimg.com/736x/67/4b/41/674b416d858ce262be0c53253b3f1dcc.jpg',
-        sourceUrl: 'https://guruapi.tech',
+        thumbnailUrl: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A',
+        sourceUrl: 'https://whatsapp.com/channel/0029VaiuD4s4IBhI0fzbv40Z',
         mediaType: 1,
         renderLargerThumbnail: false,
       },
@@ -618,56 +618,56 @@ handler.before = async (m, { conn }) => {
   if (choice === '1') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: botmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: botmenu },
       { quoted: fcontact }
     )
   } else if (choice === '2') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: ownermenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: ownermenu },
       { quoted: fcontact }
     )
   } else if (choice === '3') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: groupmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: groupmenu },
       { quoted: fcontact }
     )
   } else if (choice === '4') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: funmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: funmenu },
       { quoted: fcontact }
     )
   } else if (choice === '5') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: reactmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: reactmenu },
       { quoted: fcontact }
     )
   } else if (choice === '6') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: dlmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: dlmenu },
       { quoted: fcontact }
     )
   } else if (choice === '7') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: groupmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: groupmenu },
       { quoted: fcontact }
     )
   } else if (choice === '8') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: logomenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: logomenu },
       { quoted: fcontact }
     )
   } else if (choice === '9') {
     await conn.sendMessage(
       m.chat,
       {
-        image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' },
+        image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' },
         caption: stickermenu,
       },
       { quoted: fcontact }
@@ -675,50 +675,50 @@ handler.before = async (m, { conn }) => {
   } else if (choice === '10') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: audiomenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: audiomenu },
       { quoted: fcontact }
     )
   } else if (choice === '11') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: newsmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: newsmenu },
       { quoted: fcontact }
     )
   } else if (choice === '12') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: economy },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: economy },
       { quoted: fcontact }
     )
   } else if (choice === '13') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: animemenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: animemenu },
       { quoted: fcontact }
     )
   } else if (choice === '14') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: nsfwmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: nsfwmenu },
       { quoted: fcontact }
     )
   } else if (choice === '15') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: toolsmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: toolsmenu },
       { quoted: fcontact }
     )
   } else if (choice === '16') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: Aimenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: Aimenu },
       { quoted: fcontact }
     )
   } else if (choice === '17') {
     await conn.sendMessage(
       m.chat,
       {
-        image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' },
+        image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' },
         caption: religionmenu,
       },
       { quoted: fcontact }
@@ -726,7 +726,7 @@ handler.before = async (m, { conn }) => {
   } else if (choice === '18') {
     await conn.sendMessage(
       m.chat,
-      { image: { url: 'https://cdn.jsdelivr.net/gh/Guru322/api@Guru/K.jpg' }, caption: pluginmenu },
+      { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAVWV2LX3HTJIDUGEEZXHPR4A' }, caption: pluginmenu },
       { quoted: fcontact }
     )
   } else {
