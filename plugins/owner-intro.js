@@ -27,7 +27,7 @@ Function(
                body: "ᴄʟɪᴄᴋ ʜᴇʀᴇ 🦋 !!",
                mediaType: 1,
                thumbnail: thumb,
-               sourceUrl: "http://wa.me/919074692450?text=_៚ʜᴇʟʟᴏ+🪄_"
+               sourceUrl: "http://wa.me/24105114159?text=_៚ʜᴇʟʟᴏ+🪄_"
              }
         // ADDED */ TO REMOVE LINK PREVIEW TYPE
         options.quoted = {
