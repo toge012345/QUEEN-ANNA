@@ -38,10 +38,7 @@ let quote = quotes[Math.floor(Math.random() * quotes.length)];
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 
-  ཌ|━━🤖 _BOT STATUS:_🤖━━|ད
-  ⚀------- *IPHONE-MENU* ------⚀
-
-┌─𐂅  *𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸*  𐂅
+ཌ|━━🤖 _BOT STATUS:_🤖━━|
 | ❁✓  *Creator:* 𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸
 | 🤖  *Bot Name:* 𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰
 | 💻  *Host:* Linux 🟩
