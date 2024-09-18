@@ -10,16 +10,14 @@ import {
 } from "../lib/levelling.js";
 import moment from "moment-timezone";
 import os from "os";
+let pp = './ANNA.jpg'
 import fetch from "node-fetch";
 
 const defaultMenu = {
   before: `
-🌟✨ *Welcome to ${botname}* ✨🌟
-╭━━━⊱ 👤 *USER* 👤 ⊱━━━╮
-🖋️ *Name:* _%name_
-╰━━━━━━━━━━━━━━━━╯
-
+🌟✨ *hi my name is ${botname}* ✨🌟
 ╭━━━⊱ 🌐 *INFO* 🌐 ⊱━━━╮
+🙈 *User:* _%name_
 ⛑️ *Mode:* _%mode_
 📱 *Platform:* _%platform_
 💻 *Type:* _NodeJs_
@@ -32,12 +30,12 @@ const defaultMenu = {
 📢 *%ucpn*
 
 ╭━━━⊱ 🛠️ *INFO CMD* 🛠️ ⊱━━━╮ 
-│ 🔢 _*%totalfeatures* Commands_
+│ ✨ _*%totalfeatures* Commands_
 ╰━━━━━━━━━━━━━━━╯
 %readmore
 `.trimStart(),
-  header: "╭━━━⊱ 🗂️ *%category* 🗂️ ⊱━━━╮",
-  body: "  │💬 _%cmd_ %isPremium %islimit",
+  header: "╭━━━⊱ 🌀 *_%category_* 🌀 ⊱━━━╮",
+  body: "  │🤖 _%cmd_ %isPremium %islimit",
   footer: "╰━━━━━━━━━━━━━━━━╯",
   after: "\n%me",
 };
@@ -173,16 +171,16 @@ let handler = async (m, {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, "g"), (_, name) => "" + replace[name]);
     const pp = (thumb);
 
-    let contact = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+    let contact = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '24105114159@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
 
-    conn.sendMessage(m.chat, { video: { url: menuvid }, caption: text.trim(), gifPlayback: true, gifAttribution: 0}, { quoted: m });
-
+   conn.sendFile(m.chat, pp, 'perfil.jpg', lkr, m, false, { mentions: [who] })
+   m.react('📃')
   } catch (e) {
     await conn.reply(m.chat, " error", m);
     throw e;
   }
 }
-handler.command = /^(menu2|h2|hh|help2|\?)$/i;
+handler.command = /^(menu|h|hh|help|\?)$/i;
 
 export default handler;
 
