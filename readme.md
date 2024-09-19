@@ -36,32 +36,25 @@ Deploy to Heroku for a quick and easy setup, [Create Account](https://signup.her
 
 ---
 
-### KOYEB
-[![Deploy on Koyeb](https://img.shields.io/badge/Deploy%20on-Koyeb-1DA1F2?style=for-the-badge&logo=koyeb&logoColor=white)](https://app.koyeb.com/services/deploy?type=docker&image=docker.io/fxastro/fxop-md&name=fxop-md-demo&env[SESSION_ID]=session-id&env[BOT_INFO]=TOGE,QUEEN-MIA-MD&env[SUDO]=24105114159&env[ANTILINK]=true&env[PORT]=8000&service_type=worker)
+### REPLIT
+[![Deploy on Replit](https://img.shields.io/badge/Deploy%20on-Render-003d2b?style=for-the-badge&logo=render&logoColor=white)]([https://repl.it/github/toge012345/QUEEN-ANNA) 
 
-Deploy to Koyeb using Docker images for more control over the environment configuration. [Create Account](https://app.koyeb.com/auth/signup)
+you do not have a replit account created here [Create Account](https://replit.com/signup)
 
 ---
 
 ### RENDER
-[![Deploy on Render](https://img.shields.io/badge/Deploy%20on-Render-003d2b?style=for-the-badge&logo=render&logoColor=white)](https://render.com/deploy?repo=https://github.com/toge012345/QUEEN-MIA-MD&env=SESSION_ID,BOT_INFO)
+[![Deploy on Render](https://img.shields.io/badge/Deploy%20on-Render-003d2b?style=for-the-badge&logo=render&logoColor=white)](https://render.com/deploy?repo=https://github.com/toge012345/QUEEN-ANNA&env=SESSION_ID,BOT_INFO)
 
 Use Render for deployment to take advantage of auto-scaling and global distribution. [Create Account](https://render.com/)
 
 ---
 
 ### RAILWAY
-[![Deploy on Railway](https://img.shields.io/badge/Deploy%20on-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/new/template?template=https://github.com/toge012345/QUEEN-MIA-MD&envs=SESSION_ID,BOT_INFO)
+[![Deploy on Railway](https://img.shields.io/badge/Deploy%20on-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/new/template?template=https://github.com/toge012345/QUEEN-ANNA&envs=SESSION_ID)
 
 
 Deploy to Railway for a serverless experience and ease of use with GitHub integration. [Create Account](https://railway.app/)
-
----
-
-### TERMUX
-[![Deploy on Termux](https://img.shields.io/badge/Deploy%20on-Termux-2CA5E0?style=for-the-badge&logo=shell&logoColor=white)](https://github.com/FXastro/fxop-md/blob/main/lib/termux.md)
-
-For a more hands-on approach, deploy using Termux on Android for local control and offline capability.
 
 ---
 
