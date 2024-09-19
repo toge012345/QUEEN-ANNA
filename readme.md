@@ -27,7 +27,7 @@
 - ✔️ | **Multi Device**   
 ---------
 
-## Deployments Support 💦
+## Deployments Support
 
 ### HEROKU
 [![Deploy on Heroku](https://img.shields.io/badge/Deploy%20on-Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://www.heroku.com/deploy?template=https://github.com/toge012345/QUEEN-MIA-MD)
