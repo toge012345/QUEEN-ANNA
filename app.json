@@ -7,11 +7,6 @@
   "repository": "https://github.com/toge012345/QUEEN-ANNA",
   "stack": "container",
   "env": {
-    "DATABASE_URL": {
-      "description": "your mongodb database url",
-      "required": false,
-      "value": ""
-    },
     "SESSION_ID": {
       "description": "your session id",
       "required": true,
@@ -30,7 +25,7 @@
     "PREFIX": {
       "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
       "required": false,
-      "value": ""
+      "value": "."
     },
      "HKEY": {
       "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
@@ -56,11 +51,6 @@
       "description": "bot will forward deleted messages if you make it true",
       "required": false,
       "value": "false"
-    },
-     "REMOVEBG_KEY": {
-      "description": "your RemoveBg api key",
-      "required": false,
-      "value": ""
     }
     },
     "buildpacks": [
