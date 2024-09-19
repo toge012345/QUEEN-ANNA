@@ -1,6 +1,6 @@
 const handler = async (m, {conn, args, groupMetadata, participants, usedPrefix, command, isBotAdmin, isSuperAdmin}) => {
-  if (!args[0]) return m.reply(`⚠️Enter The ContryCode You Want To Kick Numbers *📌Example: ${usedPrefix + command} 91*`);
-  if (isNaN(args[0])) return m.reply(`⚠️Enter The ContryCode You Want To Kick Numbers *📌Example: ${usedPrefix + command} 91*`);
+  if (!args[0]) return m.reply(`⚠️Enter The ContryCode You Want To Kick Numbers *📌Example: ${usedPrefix + command} 241*`);
+  if (isNaN(args[0])) return m.reply(`⚠️Enter The ContryCode You Want To Kick Numbers *📌Example: ${usedPrefix + command} 241*`);
   const lol = args[0].replace(/[+]/g, '');
   const ps = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol));
   const bot = global.db.data.settings[conn.user.jid] || {};
