@@ -21,7 +21,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
       'https://letemoinhaiti.com/home/wp-content/uploads/2024/03/img_9025-1-850x560.jpg', 
       [['Script', `.sc`]], 
       null, 
-      [['Follow Me', `https://github.com/Guru322`]], 
+      [['Follow Me', `https://github.com/toge012345`]], 
       m
     );
   } catch (error) {
