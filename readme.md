@@ -37,7 +37,7 @@ Deploy to Heroku for a quick and easy setup, [Create Account](https://signup.her
 ---
 
 ### REPLIT
-[![Deploy on Replit](https://img.shields.io/badge/Deploy%20on-Replit-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)]([https://repl.it/github/toge012345/QUEEN-ANNA) 
+[![Deploy on Replit](https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=replit&logoColor=white)]([https://repl.it/github/toge012345/QUEEN-ANNA) 
 
 you do not have a replit account created here [Create Account](https://replit.com/signup)
 
