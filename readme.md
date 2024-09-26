@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/ANNA.jpg?token=GHSAT0AAAAAACWTLQTAKIO46WHT6Q5MQYN4ZXBDOZQ" />
 </p>
-<h2> IS UPDATE ANNA-MD</h2></h2>
+<h2>QUEEN ANNA</h2></h2>
 <h3 align="center">A Simple WhatsApp Bot</h3>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href='https://anna-session-v2.onrender.com/' target="_blank">
+    <a href='https://anna-web-woad.vercel.app/' target="_blank">
         <img alt='SESSION' src='https://img.shields.io/badge/Get%20Session%20ID-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/>
     </a>
      <a href="https://whatsapp.com/channel/0029VaiuD4s4IBhI0fzbv40Z">
