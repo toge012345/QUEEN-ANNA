@@ -346,7 +346,7 @@ import {
     global.fcontact = { key: { fromMe: false, participant: `0@s.whatsapp.net`, remoteJid: 'status@broadcast' }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
     const infoText = `┏─╴[ *QUEEN ANNA* ] ──┓
 │ 𝐂𝐫𝐞𝐚𝐭𝐨𝐫 : *@24105114159*
-│ 𝐁𝐨𝐭 : *QUEEN ANNA*
+│ 𝐁𝐨𝐭 : *Qᴜᴇᴇɴ-ᴀɴɴᴀ*
 │ 𝐌𝐨𝐝𝐞 : *${mode}* 
 │ 𝐓𝐢𝐦𝐞 : *${muptime}*
 │ 𝐕𝐞𝐫𝐬𝐢 : *1.0*
@@ -360,17 +360,14 @@ import {
   ││ᯤ  *2.* ᴏᴡɴᴇʀ ᴍᴇɴᴜ
   ││ᯤ *3.* ɢʀᴏᴜᴘ ᴍᴇɴᴜ
   ││ᯤ  *4.* ғᴜɴ ᴍᴇɴᴜ
-  ││ᯤ  *5.* ʀᴇᴀᴄᴛɪᴏɴ ᴍᴇɴᴜ
+  ││ᯤ  *5.* ᴀɴɪᴍᴇ ᴍᴇɴᴜ
   ││ᯤ *6.* ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ᴍᴇɴᴜ
   ││ᯤ  *7.* ɢᴀᴍᴇ ᴍᴇɴᴜ
-  ││ᯤ  *8.* ʟᴏɢᴏ ᴍᴇɴᴜ
-  ││ᯤ  *9.* sᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ
-  ││ᯤ *10.* ᴀᴜᴅɪᴏ ᴍᴇɴᴜ
-  ││ᯤ  *11.* ɴᴇᴡs ᴍᴇɴᴜ
-  ││ᯤ  *13.* ᴛᴏᴏʟs ᴍᴇɴᴜ
-  ││ᯤ  *14.* ᴀɪ ᴍᴇɴᴜ
-  ││ᯤ  *15.* ʀᴇʟɪɢɪᴏɴ ᴍᴇɴᴜ
-  ││ᯤ  *16.* ᴘʟᴜɢɪɴ ᴍᴇɴᴜ
+  ││ᯤ  *8.* sᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ
+  ││ᯤ *9.* ᴀᴜᴅɪᴏ ᴍᴇɴᴜ
+  ││ᯤ  *10.* ᴄᴏɴᴠᴇʀᴛᴇʀ ᴍᴇɴᴜ
+  ││ᯤ  *11.* ᴛᴏᴏʟs ᴍᴇɴᴜ
+  ││ᯤ  *12.* ʀᴀɴᴅᴏᴍᴇ ᴍᴇɴᴜ
   ┗───────────────┛
   ${readMore}` 
 ;
@@ -418,60 +415,38 @@ import {
       }, { quoted:fcontact });
       } else if (choice === "5") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: reactmenu
+        caption: animemenu
       }, { quoted:fcontact });
       } else if (choice === "6") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: dlmenu
+        caption: downloadmenu
       }, { quoted:fcontact });
       } else if (choice === "7") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: groupmenu
+        caption: gamemenu
       }, { quoted:fcontact });
       } else if (choice === "8") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: logomenu
+        caption: stickermenu
       }, { quoted:fcontact });
       } else if (choice === "9") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: stickermenu
+        caption: audiomenu
       }, { quoted:fcontact });
       } else if (choice === "10") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: audiomenu
+        caption: convertemenu
       }, { quoted:fcontact });
       } else if (choice === "11") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: newsmenu
+        caption: toolsmenu
       }, { quoted:fcontact });
       } else if (choice === "12") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: economy
+        caption: randomemenu
       }, { quoted:fcontact });
       } else if (choice === "13") {
         await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: animemenu
-      }, { quoted:fcontact });
-      } else if (choice === "14") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: nsfwmenu
-      }, { quoted:fcontact });
-      } else if (choice === "15") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: toolsmenu
-      }, { quoted:fcontact });
-      } else if (choice === "16") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: Aimenu
-      }, { quoted:fcontact });
-      } else if (choice === "17") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: religionmenu
-      }, { quoted:fcontact });
-      } else if (choice === "18") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
-        caption: pluginmenu
-      }, { quoted:fcontact });
       } else {
         m.reply('Invalid choice. Please reply with a valid number.');
       }
