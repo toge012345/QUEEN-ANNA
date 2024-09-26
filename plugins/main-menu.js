@@ -13,469 +13,280 @@ import {
 
   
    let groupmenu = `
-   ✦ ───『 *group* 』─── ⚝
-  ➫ .getbio <@tag/reply>  Ⓛ
-  ➫ .animequote
-  ➫ .Setdesc <text>
-  ➫ .setname <text>
-  ➫ .add
-  ➫ .delete
-  ➫ .delwarn @user
-  ➫ .demote (@tag)
-  ➫ .infogp
-  ➫ .hidetag
-  ➫ .invite <917xxx>
-  ➫ .kick @user
-  ➫ .link
-  ➫ .poll question|option|option
-  ➫ .profile
-  ➫ .promote
-  ➫ .resetlink
-  ➫ .setbye <text>
-  ➫ .group *open/close*
-  ➫ .setwelcome <text>
-  ➫ .simulate <event> @user
-  ➫ .staff
-  ➫ .tagall
-  ➫ .totag
-  ➫ .warn @user
-  ➫ .warns
-  ➫ .main
-  ╰──────────⳹`
+╭───❮ *𝙶𝚁𝙾𝚄𝙿 𝙼𝙴𝙽𝚄* ❯
+│ _.kick *@tag*_
+│ _.promote *@tag*_
+│ _.demote *@tag*_
+│ _.infogroup_
+│ _.getbio *@tag*_
+│ _.resetlink_
+│ _.link_
+│ _.*on/off* antilink_
+│ _.*on/off* antidelete_
+│ _.invite_
+│ _.setppgc *image*_
+│ _.setname *text*_
+│ _.setdesc *text*_
+│ _.setwelcome *text*_
+│ _.setbye *text*_
+│ _.hidetag *text/image/audio/vid*_
+│ _.warn *@tag*_
+│ _.unwarn *@tag*_
+│ _.listwarn_
+│ _.listnum_
+│ _.kicknum_
+│ _.group *open/close*_
+│ _.tagall_
+╰─────────────⦁`
   
   let ownermenu = `
-  ✦ ───『 *owner* 』─── ⚝
-  ◈ .addprem <@tag>
-  ◈ .addowner @user
-  ◈ .allow <@tag>
-  ◈ .HEROKU
-  ◈ .ban @user
-  ◈ .banchat
-  ◈ .tx
-  ◈ .broadcastgroup <text>
-  ◈ .bcgc <text>
-  ◈ .cleartmp
-  ◈ .delexpired
-  ◈ .delprem @user
-  ◈ .removeowner @user
-  ◈ .setppbotfull
-  ◈ .getplugin <name file>
-  ◈ .getfile <name file>
-  ◈ .join <chat.whatsapp.com> <dias>
-  ◈ .reset <54xxx>
-  ◈ .resetprefix
-  ◈ .restart
-  ◈ ..setprefix
-  ◈ ..setprefix [symbol]
-  ◈ .unban @user
-  ◈ .unbanchat
-  ◈ .update
-  ◈ .config
-  ◈ .listban
-  ◈ .deleteplugin <name>
-  ╰──────────⳹`
+╭───❮ *𝙾𝚆𝙽𝙴𝚁 𝙼𝙴𝙽𝚄* ❯
+│ _.*on/off* public_
+│ _.*on/off* autoreact_
+│ _.fullpp_
+│ _.update_
+│ _.setsudo_
+│ _.dltsudo_
+│ _.autoadmin_
+│ _.left_
+│ _.banchat_
+│ _.unbanchat_
+│ _.ban_
+│ _.unban_
+│ _.banlist_
+│ _.block_
+│ _.unblock_
+│ _.blocklist_
+│ _.bc_
+│ _.bcgc_
+│ _.join_ 
+│ _.restart_
+│ _.setpp_
+│ _.setprefix_
+│ _.resetprefix_
+│ _.resetuser_
+│ _.getfile_
+│ _.getplugin_
+╰─────────────⦁ `
   
   let funmenu = `
-  ✦ ───『 *fun* 』─── ⚝
-  ◈ .afk <reason>
-  ◈ .tomp3
-  ◈ .toav
-  ◈ .bot
-  ◈ .character @tag
-  ◈ .dare
-  ◈ .flirt
-  ◈ .gay @user
-  ◈ .pickupline
-  ◈ .question
-  ◈ .shayari
-  ◈ .ship
-  ◈ .yomamajoke
-  ◈ .truth
-  ◈ .waste @user
-  ◈ .image
-  ◈ .meme
-  ◈ .quote
-  ╰──────────⳹`
-  
-  let reactmenu = `
-  ✦ ───『 *reaction* 』─── ⚝
-  ◈ .bully @tag
-  ◈ .cuddle @tag
-  ◈ .cry @tag
-  ◈ .hug @tag
-  ◈ .awoo @tag
-  ◈ .kiss @tag
-  ◈ .lick @tag
-  ◈ .pat @tag
-  ◈ .smug @tag
-  ◈ .bonk @tag
-  ◈ .yeet @tag
-  ◈ .blush @tag
-  ◈ .smile @tag
-  ◈ .wave @tag
-  ◈ .highfive @tag
-  ◈ .handhold @tag
-  ◈ .nom @tag
-  ◈ .bite @tag
-  ◈ .glomp @tag
-  ◈ .slap @tag
-  ◈ .kill @tag
-  ◈ .happy @tag
-  ◈ .wink @tag
-  ◈ .poke @tag
-  ◈ .dance @tag
-  ◈ .cringe @tag
-  ╰──────────⳹`
+╭───❮ *𝙵𝚄𝙽 𝙼𝙴𝙽𝚄* ❯
+│ _.hearts_
+│ _.moon_
+│ _.question_
+│ _.character_
+│ _.truth_
+│ _.dare_
+│ _.flirt_
+│ _.gay_
+│ _.meme_
+│ _.ship_
+│ _.kill_
+│ _.kiss_
+│ _.pat_
+│ _.slap_
+│ _.waste_
+│ _.simpcard_
+│ _.hornycard_
+│ _.ytcomment_
+│ _.stupid_
+│ _.lolicon_
+╰─────────────⦁`  
   
   let dlmenu = `
-  ✦ ───『 *downloader* 』─── ⚝
-  ◈ .facebook <url>
-  ◈ .gdrive 🅟
-  ◈ .gitclone <url>
-  ◈ .igstalk
-  ◈ .instagram
-  ◈ .mediafire <url>
-  ◈ .mega
-  ◈ .modapk
-  ◈ .play <query>
-  ◈ .play2 <text>
-  ◈ .playvid <text>
-  ◈ .spotify
-  ◈ .tiktok <url>
-  ◈ .tiktokstalk
-  ◈ .twitter <url>
-  ◈ .ytmp3 <url>
-  ◈ .ytsearch
-  ◈ .ytmp4 <yt-link>
-  ◈ .wallpaper <query>
-  ╰──────────⳹`
+╭───❮ *𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄* ❯
+│ _.song_
+│ _.play_
+│ _.apk_
+│ _.yts_
+│ _.insta *link*_
+│ _.img_
+│ _.pinterest_
+│ _.mediafire *link*_
+│ _.gdrive *link*_
+│ _.gitclone *link*_
+│ _.twitter *link*_
+│ _.tiktok *link*_
+│ _.tiktokstalk_
+│ _.spotify_
+│ _.fb *link*_
+╰─────────────⦁`
   
   let gamemenu = `
-  ✦ ───『 *game* 』─── ⚝
-  ◈ .slot <amount>
-  ◈ .chess [from to]
-  ◈ .chess delete
-  ◈ .chess join
-  ◈ .chess start
-  ◈ .delttt
-  ◈ .guessflag
-  ◈ .Maths <modes>
-  ◈ .ppt <rock/paper/scissors>
-  ◈ .tictactoe <tag number>
-  ╰──────────⳹`
-  let logomenu = `
-  ✦ ───『 *maker* 』─── ⚝
-  ◈ .blur
-  ◈ .difuminar2
-  ◈ .hornycard
-  ◈ .hornylicense
-  ◈ .gfx1
-  ◈ .gfx2
-  ◈ .gfx3
-  ◈ .gfx4
-  ◈ .gfx5
-  ◈ .gfx6
-  ◈ .gfx7
-  ◈ .gfx8
-  ◈ .gfx9
-  ◈ .gfx10
-  ◈ .gfx11
-  ◈ .gfx12
-  ◈ .simpcard
-  ◈ .itssostupid
-  ◈ .iss
-  ◈ .stupid
-  ◈ .tweet <comment>
-  ◈ .lolicon
-  ◈ .ytcomment <comment>
-  ╰──────────⳹`
+╭───❮ *𝙶𝙰𝙼𝙴 𝙼𝙴𝙽𝚄* ❯
+│ _.tictactoe_
+│ _.delttt_
+│ _.math_
+│ _.math answer_
+│ _.ppt_
+│ _.slot_
+│ _.casino_
+╰─────────────⦁`
   
   let stickermenu = `
-  ✦ ───『 *sticker* 』─── ⚝
-  ◈ .emojimix <emoji+emoji>
-  ◈ .getsticker
-  ◈ .smaker
-  ◈ .stickerwithmeme (caption|reply media)
-  ◈ .swmeme <url>
-  ◈ .swm(caption|reply media)
-  ◈ .sfull
-  ◈ .toimg <sticker>
-  ◈ .tovid
-  ◈ .trigger <@user>
-  ◈ .ttp
-  ◈ .ttp2
-  ◈ .ttp3
-  ◈ .ttp4
-  ◈ .ttp5
-  ◈ .attp
-  ◈ .attp2
-  ◈ .attp3
-  ◈ .take <name>|<author>
-  ╰──────────⳹`
+╭───❮ *𝚂𝚃𝙸𝙲𝙺𝙴𝚁  𝙼𝙴𝙽𝚄* ❯
+│ _.sticker_
+│ _.take_
+│ _.smaker_
+│ _.getsticker_
+│ _.emix_
+│ _.attp_
+╰─────────────⦁ `
   
   let audiomenu = `
-  ✦ ───『 *audio* 』─── ⚝
-  ◈ .bass [vn]
-  ◈ .blown [vn]
-  ◈ .deep [vn]
-  ◈ .earrape [vn]
-  ◈ .fast [vn]
-  ◈ .fat [vn]
-  ◈ .nightcore [vn]
-  ◈ .reverse [vn]
-  ◈ .robot [vn]
-  ◈ .slow [vn]
-  ◈ .smooth [vn]
-  ◈ .tupai [vn]
-  ╰──────────⳹`
-  
-  
-  let newsmenu = `
-  ✦ ───『 *news* 』─── ⚝
-  ◈ .news
-  ◈ .technews
-  ◈ .ndtv
-  ╰──────────⳹
-  `
+╭───❮ *𝙰𝚄𝙳𝙸𝙾 𝙼𝙴𝙽𝚄* ❯
+│ _.bass_
+│ _.blown_
+│ _.deep_
+│ _.earrape_
+│ _.fat_
+│ _.fast_
+│ _.nightcore_
+│ _.reverse_
+│ _.squrrel_
+│ _.slow_
+╰─────────────⦁`
+ 
+  let convertermenu = `
+╭───❮ *𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 𝙼𝙴𝙽𝚄* ❯
+│ _.toanime_
+│ _.tomp3_
+│ _.toimg_
+│ _.tovid_
+╰─────────────⦁`
+
   let economy = `
-  ✦ ───『 *economy* 』─── ⚝
-  ◈ .addgold <@user>
-  ◈ .addxp <@user>
-  ◈ .bank
-  ◈ .buych
-  ◈ .cock-fight <amount>
-  ◈ .buy
-  ◈ .buyall
-  ◈ .daily
-  ◈ .deposit
-  ◈ .gamble <amount> <color(red/black)>
-  ◈ .give credit [amount] [@tag]
-  ◈ .levelup
-  ◈ .rank
-  ◈ .rob
-  ◈ .roulette <amount> <color(red/black)>
-  ◈ .wallet
-  ◈ .withdraw
-  ◈ .work
-  ╰──────────⳹`
+╭───❮ *𝙴𝙲𝙾𝙽𝙾𝙼𝚈 𝙼𝙴𝙽𝚄* ❯
+│ _.claim/daily_
+│ _.weekly_
+│ _.monthly_
+│ _.leaderboard_
+│ _.bet_
+│ _.heal_
+│ _.craft_
+│ _.balance_
+│ _.shop_
+│ _.sell_
+│ _.adventure_
+│ _.opencrate_
+│ _.mine_
+│ _.work_
+│ _.transfer_
+│ _.todiamond_
+│ _.tomoney_
+╰─────────────⦁`
   let animemenu = `
-  ✦ ───『 *anime* 』─── ⚝
-  ◈ .anime
-  ◈ .akira
-  ◈ .akiyama
-  ◈ .anna
-  ◈ .asuna
-  ◈ .ayuzawa
-  ◈ .boruto
-  ◈ .chiho
-  ◈ .chitoge
-  ◈ .deidara
-  ◈ .erza
-  ◈ .elaina
-  ◈ .eba
-  ◈ .emilia
-  ◈ .hestia
-  ◈ .hinata
-  ◈ .inori
-  ◈ .isuzu
-  ◈ .itachi
-  ◈ .itori
-  ◈ .kaga
-  ◈ .kagura
-  ◈ .kaori
-  ◈ .keneki
-  ◈ .kotori
-  ◈ .kurumi
-  ◈ .madara
-  ◈ .mikasa
-  ◈ .miku
-  ◈ .minato
-  ◈ .naruto
-  ◈ .nezuko
-  ◈ .sagiri
-  ◈ .sasuke
-  ◈ .sakura
-  ◈ .manhwa
-  ◈ .waifu
-  ◈ .neko
-  ◈ .zerotwo
-  ◈ .loli
-  ◈ .pokedex <pokemon>
-  ◈ .trace
-  ╰──────────⳹
-  `
+╭───❮ *𝙰𝙽𝙸𝙼𝙴 𝙼𝙴𝙽𝚄* ❯
+│ _.waifu_
+│ _.neko_
+│ _.loli_
+│ _.naruto_
+│ _.itachi_
+│ _.akira_
+│ _.asuna_
+│ _.akiyama_
+│ _.boruto_
+│ _.hornycard_
+│ _.ayuzawa_
+│ _.anna_
+│ _.chiho_
+│ _.chitoge_
+│ _.deidara_
+│ _.erza_
+│ _.elaina_
+│ _.emilia_
+│ _.hestia_
+│ _.hinata_
+│ _.inori_
+│ _.isuzu_
+│ _.kagura_
+│ _.kaori_
+│ _.keneki_
+│ _.kurumi_
+│ _.madara_
+│ _.mikasa_
+│ _.miku_
+│ _.minato_
+│ _.nezuko_
+│ _.sagiri_
+│ _.sasuke_
+│ _.sakura_
+│ _.kotori_
+╰─────────────⦁`
   let nsfwmenu = `
-  ✦ ───『 *nsfw* 』─── ⚝
-  ◈ .genshin
-  ◈ .swimsuit
-  ◈ .schoolswimsuit
-  ◈ .white
-  ◈ .barefoot
-  ◈ .touhou
-  ◈ .gamecg
-  ◈ .hololive
-  ◈ .uncensored
-  ◈ .sunglasses
-  ◈ .glasses
-  ◈ .weapon
-  ◈ .shirtlift
-  ◈ .chain
-  ◈ .fingering
-  ◈ .flatchest
-  ◈ .torncloth
-  ◈ .bondage
-  ◈ .demon
-  ◈ .wet
-  ◈ .pantypull
-  ◈ .headdress
-  ◈ .headphone
-  ◈ .tie
-  ◈ .anusview
-  ◈ .shorts
-  ◈ .stokings
-  ◈ .topless
-  ◈ .beach
-  ◈ .bunnygirl
-  ◈ .bunnyear
-  ◈ .idol
-  ◈ .vampire
-  ◈ .gun
-  ◈ .maid
-  ◈ .bra
-  ◈ .nobra
-  ◈ .bikini
-  ◈ .whitehair
-  ◈ .blonde
-  ◈ .pinkhair
-  ◈ .bed
-  ◈ .ponytail
-  ◈ .nude
-  ◈ .dress
-  ◈ .underwear
-  ◈ .foxgirl
-  ◈ .uniform
-  ◈ .skirt
-  ◈ .sex
-  ◈ .sex2
-  ◈ .sex3
-  ◈ .breast
-  ◈ .twintail
-  ◈ .spreadpussy
-  ◈ .tears
-  ◈ .seethrough
-  ◈ .breasthold
-  ◈ .drunk
-  ◈ .fateseries
-  ◈ .spreadlegs
-  ◈ .openshirt
-  ◈ .headband
-  ◈ .food
-  ◈ .close
-  ◈ .tree
-  ◈ .nipples
-  ◈ .erectnipples
-  ◈ .horns
-  ◈ .greenhair
-  ◈ .wolfgirl
-  ◈ .catgirl
-  ◈ .nsfw
-  ◈ .ass
-  ◈ .boobs
-  ◈ .lesbian
-  ◈ .pussy
-  ◈ .pack
-  ◈ .xvid
-  ◈ .xnxx
-  ╰──────────⳹`
+╭───❮ *𝙽𝚂𝙵𝚆 𝙼𝙴𝙽𝚄* ❯
+│ _.on nsfw_
+│ _.off nsfw_
+│ _.hentais *text*_
+│ _.xnxxdl *link*_
+╰────────────⦁`
   
   let toolsmenu = `
-  ✦ ───『 *tools* 』─── ⚝
-  ◈ .nowa
-  ◈ .qr <text>
-  ◈ .qrcode <text>
-  ◈ .style <key> <text>
-  ◈ .weather *<place>*
-  ◈ .dehaze
-  ◈ .recolor
-  ◈ .hdr
-  ◈ .length <amount>
-  ◈ .tinyurl <link>
-  ◈ .shorten <link>
-  ◈ .tempmail
-  ◈ .shazam
-  ◈ .cal <equation>
-  ◈ .carbon <code>
-  ◈ .define <word>
-  ◈ .element
-  ◈ .google
-  ◈ .itunes
-  ◈ .lyrics
-  ◈ .imdb
-  ◈ .course
-  ◈ .randomcourse
-  ◈ .readmore <text1>|<text2>
-  ◈ .readvo
-  ◈ .removebg
-  ◈ .ss <url>
-  ◈ .ssf <url>
-  ◈ .subreddit
-  ◈ .telesticker  Ⓛ
-  ◈ .tourl
-  ◈ .translate <lang> <text>
-  ◈ .true
-  ◈ .tts <lang> <task>
-  ◈ .wa
-  ◈ .wikipedia
-  ╰──────────⳹`
+╭───❮ *𝚃𝙾𝙾𝙻𝚂 𝙼𝙴𝙽𝚄* ❯
+│ _.autosticker_
+│ _.pdf_
+│ _.whatmusic_
+│ _.tempmail_
+│ _.checkmail_
+│ _.pokedex_
+│ _.calc_
+│ _.google_
+│ _.lyrics_
+│ _.readmore_
+│ _.ssweb_
+│ _.tts_
+│ _.trt_
+│ _.wiki_
+│ _.nowa_
+│ _.qrmaker_
+│ _.true_
+│ _.fancy_
+│ _.weather_
+│ _.alexa_
+│ _.itunes_
+│ _.technews_
+╰─────────────⦁`
   
-  let Aimenu = `
-  ✦ ───『 *AI* 』─── ⚝
-  ◈ .bing
-  ◈ .dalle
-  ◈ .chatgpt
-  ◈ .toanime
-  ◈ .gitagpt
-  ◈ .tocartoon
-  ◈ .ai
-  ◈ .bard
-  ◈ .alexa
-  ╰──────────⳹
-  `
-  let religionmenu = `
-    ✦ ───『 *plugin* 』─── ⚝
-  ◈ .plugins
-  ◈ .install <Gist URL>
-  ╰──────────⳹`
-  
+  let Randommenu = `
+╭───❮ *𝚁𝙰𝙽𝙳𝙾𝙼 𝙼𝙴𝙽𝚄* ❯
+│ _.bts_
+│ _.cr7_
+│ _.cat_
+│ _.coffee_
+│ _.cartoon_
+│ _.cyberspace_
+│ _.couplepp_
+│ _.dog_
+│ _.doraemon_
+│ _.ff_
+│ _.hacker_
+│ _.messi_
+│ _.pubg_
+│ _.pentol_
+│ _.planet_
+│ _.tech_
+│ _.wpmountain_
+│ _.wpgaming_
+│ _.wprandom_
+╰─────────────⦁`  
+
   let botmenu = `
-  ✦ ───『 *Bot Menu* 』─── ⚝
-  ◈ .ping
-  ◈ .runtime
-  ◈ .script
-  ◈ .server
-  ◈ .blocklist
-  ◈ .alive
-  ◈ .info
-  ◈ .owner
-  ◈ .totalfeature
-  ◈ .list
-  ◈ .messi
-  ◈ .cristianoronaldo
-  ◈ .cr7
-  ◈ .ppcouple
-  ◈ .ppcp
-  ◈ .pinterest
-  ◈ .reg <name.age>
-  ◈ .mysn
-  ◈ .unreg 
-  ╰──────────⳹
-  `
-  let pluginmenu = `
-  ✦ ───『 *plugin* 』─── ⚝
-  ◈ .plugins
-  ◈ .install <Gist URL>
-  ╰──────────⳹
-  `
+╭───❮ *𝙱𝙾𝚃 𝙼𝙴𝙽𝚄* ❯
+│ _.ping_
+│ _.uptime_
+│ _.enable_
+│ _.alive_
+│ _.owner_
+│ _.report_
+│ _.bot_
+│ _.script_
+│ _.runtime_
+│ _.infobot_
+│ _.donate_
+│ _.groups_
+│ _.blocklist_
+│ _.listprem_
+╰─────────────⦁`
 
   const handler = async (m, {
     conn,
