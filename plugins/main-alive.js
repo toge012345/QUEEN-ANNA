@@ -21,7 +21,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
-          title: "*QUEEN ANNA IS ALIVE 🌟*",
+          title: "𝐐𝐔𝐄𝐄𝐍 𝐀𝐍𝐍𝐀 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 🌟",
           body: "𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰",
           thumbnailUrl: img,
           sourceUrl: 'https://chat.whatsapp.com/GpsTju4MUAbJmmZhHU8zAR',
