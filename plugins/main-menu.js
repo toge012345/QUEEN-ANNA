@@ -373,7 +373,7 @@ import {
 ;
 
   
-  const { result, key, timeout } = await conn.sendMessage(m.chat, { video: { url: menuvid }, caption: infoText.trim(),  gifPlayback: true,
+  const { result, key, timeout } = await conn.sendMessage(m.chat, { image: { url: "https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg" }, caption: infoText.trim(),  gifPlayback: true,
   gifAttribution: 0}, { quoted: fcontact })
   
   // Save the menu options to gurumenu
@@ -398,55 +398,55 @@ import {
     const choice = m.text.trim();
     
     if (choice === "1") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: botmenu
       }, { quoted:fcontact });
       } else if (choice === "2") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: ownermenu
       }, { quoted:fcontact });
       } else if (choice === "3") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: groupmenu
       }, { quoted:fcontact });
       } else if (choice === "4") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: funmenu
       }, { quoted:fcontact });
       } else if (choice === "5") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: animemenu
       }, { quoted:fcontact });
       } else if (choice === "6") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: downloadmenu
       }, { quoted:fcontact });
       } else if (choice === "7") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: gamemenu
       }, { quoted:fcontact });
       } else if (choice === "8") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: stickermenu
       }, { quoted:fcontact });
       } else if (choice === "9") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: audiomenu
       }, { quoted:fcontact });
       } else if (choice === "10") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: convertemenu
       }, { quoted:fcontact });
       } else if (choice === "11") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: toolsmenu
       }, { quoted:fcontact });
       } else if (choice === "12") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
         caption: randomemenu
       }, { quoted:fcontact });
       } else if (choice === "13") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74b32f0d7c0571b2bf5bb.jpg' },
+        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
       } else {
         m.reply('Invalid choice. Please reply with a valid number.');
       }
