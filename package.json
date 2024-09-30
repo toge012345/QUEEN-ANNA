@@ -36,7 +36,7 @@
     "bugs": {
         "url": "https://github.com/toge012345/QUEEN-ANNA/issues"
     },
-    "license": "Apache License 2.0",
+    "license": "Apache-2.0",
     "dependencies": {
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^5.0.1",
