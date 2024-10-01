@@ -44,15 +44,13 @@ let readMore = more.repeat(850)
 let greeting = ucapan()
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
-let str = ` ┏━━━━━━━━━━━━━━┈⊷
-> 🤖 ʙᴏᴛ ɴᴀᴍᴇ: 𝐋𝐚𝐳𝐚𝐜𝐤-𝐌-𝐃𝐞𝐯𝐢𝐜𝐞
-> 📍 ᴠᴇʀꜱɪᴏɴ: 1.0.1
-> 👨‍💻 ᴏᴡɴᴇʀ : 𝐋𝐚𝐳𝐚𝐜𝐤      
-> 👤 ɴᴜᴍʙᴇʀ: 255734980103
-> 📡 ᴘʟᴀᴛғᴏʀᴍ: *𝙇𝙄𝙉𝙐𝙓*
-> 🛡 ᴍᴏᴅᴇ: *ℙ𝕌𝔹𝕃𝕀ℂ*
-> 💫 ᴘʀᴇғɪx: [ . ]
-┗━━━━━━━━━━━━━┈⊷ `
+let str = `┏─╴[ *QUEEN ANNA* ] ──┓
+│ 𝐂𝐫𝐞𝐚𝐭𝐨𝐫 : *@24105114159*
+│ 𝐁𝐨𝐭 : *Qᴜᴇᴇɴ-ᴀɴɴᴀ*
+│ 𝐌𝐨𝐝𝐞 : *${mode}* 
+│ 𝐓𝐢𝐦𝐞 : *${muptime}*
+│ 𝐕𝐞𝐫𝐬𝐢 : *1.0*
+┗──────────────────┛`
 
 let msg = generateWAMessageFromContent(m.chat, {
 
@@ -75,7 +73,7 @@ let msg = generateWAMessageFromContent(m.chat, {
           }),
 
           header: proto.Message.InteractiveMessage.Header.create({
-          ...(await prepareWAMessageMedia({ image : { url: 'https://i.imgur.com/WlBJdfh.jpeg'}}, { upload: conn.waUploadToServer})), 
+          ...(await prepareWAMessageMedia({ image : { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg'}}, { upload: conn.waUploadToServer})), 
             title: null,
             subtitle: null,
             hasMediaAttachment: false
@@ -95,11 +93,11 @@ let msg = generateWAMessageFromContent(m.chat, {
                  },
                   {
                   "name": "cta_url",
-                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌹\",\"Url\":\"https://wa.me/message/S4444FEFY35KH1\"}"
+                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌹\",\"Url\":\"https://wa.me/message/7JQKSN6B3LLKF1\"}"
                   },
                   {
                   "name": "cta_url",
-                 "buttonParamsJson": "{\"display_text\":\"BOT SC 🎉\",\"url\":\"https://github.com/Lazack28/Lazack-Device\",\"merchant_url\":\"https://github.com/Lazack28/Lazack-Device\"}"
+                 "buttonParamsJson": "{\"display_text\":\"BOT SC 🎉\",\"url\":\"https://github.com/toge012345/QUEEN-ANNA\",\"merchant_url\":\"https://github.com/Lazack28/Lazack-Device\"}"
               }
            ],
           })
