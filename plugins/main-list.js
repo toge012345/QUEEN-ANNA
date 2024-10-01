@@ -282,116 +282,116 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'nsfwmenu': 
       lkr = `
-  ✦ ───『 *nsfw* 』─── ⚝
-  ◈ .genshin
-  ◈ .swimsuit
-  ◈ .schoolswimsuit
-  ◈ .white
-  ◈ .barefoot
-  ◈ .touhou
-  ◈ .gamecg
-  ◈ .hololive
-  ◈ .uncensored
-  ◈ .sunglasses
-  ◈ .glasses
-  ◈ .weapon
-  ◈ .shirtlift
-  ◈ .chain
-  ◈ .fingering
-  ◈ .flatchest
-  ◈ .torncloth
-  ◈ .bondage
-  ◈ .demon
-  ◈ .wet
-  ◈ .pantypull
-  ◈ .headdress
-  ◈ .headphone
-  ◈ .tie
-  ◈ .anusview
-  ◈ .shorts
-  ◈ .stokings
-  ◈ .topless
-  ◈ .beach
-  ◈ .bunnygirl
-  ◈ .bunnyear
-  ◈ .idol
-  ◈ .vampire
-  ◈ .gun
-  ◈ .maid
-  ◈ .bra
-  ◈ .nobra
-  ◈ .bikini
-  ◈ .whitehair
-  ◈ .blonde
-  ◈ .pinkhair
-  ◈ .bed
-  ◈ .ponytail
-  ◈ .nude
-  ◈ .dress
-  ◈ .underwear
-  ◈ .foxgirl
-  ◈ .uniform
-  ◈ .skirt
-  ◈ .sex
-  ◈ .sex2
-  ◈ .sex3
-  ◈ .breast
-  ◈ .twintail
-  ◈ .spreadpussy
-  ◈ .tears
-  ◈ .seethrough
-  ◈ .breasthold
-  ◈ .drunk
-  ◈ .fateseries
-  ◈ .spreadlegs
-  ◈ .openshirt
-  ◈ .headband
-  ◈ .food
-  ◈ .close
-  ◈ .tree
-  ◈ .nipples
-  ◈ .erectnipples
-  ◈ .horns
-  ◈ .greenhair
-  ◈ .wolfgirl
-  ◈ .catgirl
-  ◈ .nsfw
-  ◈ .ass
-  ◈ .boobs
-  ◈ .lesbian
-  ◈ .pussy
-  ◈ .pack
-  ◈ .xvid
-  ◈ .xnxx
-  ╰──────────⳹` //
+╭───❮ *𝚗𝚜𝚏𝚠* ❯
+│_${usedPrefix}genshin_
+│_${usedPrefix}swimsuit_
+│_${usedPrefix}schoolswimsuit_
+│_${usedPrefix}white_
+│_${usedPrefix}barefoot_
+│_${usedPrefix}touhou_
+│_${usedPrefix}gamecg_
+│_${usedPrefix}hololive_
+│_${usedPrefix}uncensored_
+│_${usedPrefix}sunglasses_
+│_${usedPrefix}glasses_
+│_${usedPrefix}weapon_
+│_${usedPrefix}shirtlift_
+│_${usedPrefix}chain_
+│_${usedPrefix}fingering_
+│_${usedPrefix}flatchest_
+│_${usedPrefix}torncloth_
+│_${usedPrefix}bondage_
+│_${usedPrefix}demon_
+│_${usedPrefix}wet_
+│_${usedPrefix}pantypull_
+│_${usedPrefix}headdress_
+│_${usedPrefix}headphone_
+│_${usedPrefix}tie_
+│_${usedPrefix}anusview_
+│_${usedPrefix}shorts_
+│_${usedPrefix}stokings_
+│_${usedPrefix}topless_
+│_${usedPrefix}beach_
+│_${usedPrefix}bunnygirl_
+│_${usedPrefix}bunnyear_
+│_${usedPrefix}idol_
+│_${usedPrefix}vampire_
+│_${usedPrefix}gun_
+│_${usedPrefix}maid_
+│_${usedPrefix}bra_
+│_${usedPrefix}nobra_
+│_${usedPrefix}bikini_
+│_${usedPrefix}whitehair_
+│_${usedPrefix}blonde_
+│_${usedPrefix}pinkhair_
+│_${usedPrefix}bed_
+│_${usedPrefix}ponytail_
+│_${usedPrefix}nude_
+│_${usedPrefix}dress_
+│_${usedPrefix}underwear_
+│_${usedPrefix}foxgirl_
+│_${usedPrefix}uniform_
+│_${usedPrefix}skirt_
+│_${usedPrefix}sex_
+│_${usedPrefix}sex2_
+│_${usedPrefix}sex3_
+│_${usedPrefix}breast_
+│_${usedPrefix}twintail_
+│_${usedPrefix}spreadpussy_
+│_${usedPrefix}tears_
+│_${usedPrefix}seethrough_
+│_${usedPrefix}breasthold_
+│_${usedPrefix}drunk_
+│_${usedPrefix}fateseries_
+│_${usedPrefix}spreadlegs_
+│_${usedPrefix}openshirt_
+│_${usedPrefix}headband
+│_${usedPrefix}food_
+│_${usedPrefix}close_
+│_${usedPrefix}tree_
+│_${usedPrefix}nipples_
+│_${usedPrefix}erectnipples_
+│_${usedPrefix}horns_
+│_${usedPrefix}greenhair_
+│_${usedPrefix}wolfgirl_
+│_${usedPrefix}catgirl_
+│_${usedPrefix}nsfw_
+│_${usedPrefix}ass_
+│_${usedPrefix}boobs_
+│_${usedPrefix}lesbian_
+│_${usedPrefix}pussy_
+│_${usedPrefix}pack_
+│_${usedPrefix}xvid_
+│_${usedPrefix}xnxx_
+╰─────────────⦁` //
       break
     case 'logomenu':
       lkr = `
-  ✦ ───『 *maker* 』─── ⚝
-  ◈ .blur
-  ◈ .difuminar2
-  ◈ .hornycard
-  ◈ .hornylicense
-  ◈ .gfx1
-  ◈ .gfx2
-  ◈ .gfx3
-  ◈ .gfx4
-  ◈ .gfx5
-  ◈ .gfx6
-  ◈ .gfx7
-  ◈ .gfx8
-  ◈ .gfx9
-  ◈ .gfx10
-  ◈ .gfx11
-  ◈ .gfx12
-  ◈ .simpcard
-  ◈ .itssostupid
-  ◈ .iss
-  ◈ .stupid
-  ◈ .tweet <comment>
-  ◈ .lolicon
-  ◈ .ytcomment <comment>
-  ╰──────────` //
+╭───❮ *𝙼𝙰𝚁𝙺𝙴𝚁* ❯
+│_${usedPrefix}blur_
+│_${usedPrefix}difuminar2_
+│_${usedPrefix}hornycard_
+│_${usedPrefix}hornylicense_
+│_${usedPrefix}gfx1_
+│_${usedPrefix}gfx2_
+│_${usedPrefix}gfx3_
+│_${usedPrefix}gfx4_
+│_${usedPrefix}gfx5_
+│_${usedPrefix}gfx6_
+│_${usedPrefix}gfx7_
+│_${usedPrefix}gfx8_
+│_${usedPrefix}gfx9_
+│_${usedPrefix}gfx10_
+│_${usedPrefix}gfx11_
+│_${usedPrefix}gfx12_
+│_${usedPrefix}simpcard_
+│_${usedPrefix}itssostupid_
+│_${usedPrefix}iss_
+│_${usedPrefix}stupid_
+│_${usedPrefix}tweet <comment>_
+│_${usedPrefix}lolicon_
+│_${usedPrefix}ytcomment <comment>
+╰─────────────⦁` //
       break
     default:
       lkr = `Invalid command. Type ${usedPrefix}list to see available options.`
