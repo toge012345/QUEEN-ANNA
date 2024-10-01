@@ -139,6 +139,21 @@ ${readMore}
 │ _${usedPrefix}tovid_
 ╰─────────────⦁
 
+╭───❮ *𝙻𝙸𝚂𝚃 𝙼𝙴𝙽𝚄* ❯
+│_${usedPrefix}botmenu_
+│_${usedPrefix}ownermenu_
+│_${usedPrefix}groupmenu_
+│_${usedPrefix}funmenu_
+│_${usedPrefix}animemenu_
+│_${usedPrefix}dlmenu_
+│_${usedPrefix}gamemenu_
+│_${usedPrefix}logomenu_
+│_${usedPrefix}stickermenu_
+│_${usedPrefix}economymenu_
+│_${usedPrefix}nsfwmenu_
+│_${usedPrefix}toolmenu_
+╰─────────────⦁
+
 ╭───❮ *𝚁𝙰𝙽𝙳𝙾𝙼 𝙼𝙴𝙽𝚄* ❯
 │ _${usedPrefix}bts_
 │ _${usedPrefix}cr7_
