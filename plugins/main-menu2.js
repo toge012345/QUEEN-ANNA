@@ -1,507 +1,380 @@
-import {
-    promises,
-    readFileSync
-   } from "fs"
-   import {
-    join
-   } from "path"
-   import {
-    xpRange
-   } from "../lib/levelling.js"
-   import moment from "moment-timezone"
-   import os from "os"
+let handler = async (m, { conn, usedPrefix, command}) => {
+let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+if (!(who in global.db.data.users)) throw `❌ The User Is Not Found In My Database`
+let pp = './ANNA.jpg'
+let more = String.fromCharCode(8206)
+let readMore = more.repeat(850) 
+let lkr = `╭───❮ *𝙱𝙾𝚃 𝙼𝙴𝙽𝚄* ❯
+│ _${usedPrefix}ping_
+│ _${usedPrefix}uptime_
+│ _${usedPrefix}enable_
+│ _${usedPrefix}alive_
+│ _${usedPrefix}owner_
+│ _${usedPrefix}report_
+│ _${usedPrefix}bot_
+│ _${usedPrefix}script_
+│ _${usedPrefix}runtime_
+│ _${usedPrefix}infobot_
+│ _${usedPrefix}donate_
+│ _${usedPrefix}groups_
+│ _${usedPrefix}blocklist_
+│ _${usedPrefix}listprem_
+╰─────────────⦁
 
-  
-   let groupmenu = `
-╭───❮ *𝙶𝚁𝙾𝚄𝙿 𝙼𝙴𝙽𝚄* ❯
-│ _.kick *@tag*_
-│ _.promote *@tag*_
-│ _.demote *@tag*_
-│ _.infogroup_
-│ _.getbio *@tag*_
-│ _.resetlink_
-│ _.link_
-│ _.*on/off* antilink_
-│ _.*on/off* antidelete_
-│ _.invite_
-│ _.setppgc *image*_
-│ _.setname *text*_
-│ _.setdesc *text*_
-│ _.setwelcome *text*_
-│ _.setbye *text*_
-│ _.hidetag *text/image/audio/vid*_
-│ _.warn *@tag*_
-│ _.unwarn *@tag*_
-│ _.listwarn_
-│ _.listnum_
-│ _.kicknum_
-│ _.group *open/close*_
-│ _.tagall_
-╰─────────────⦁`
-  
-  let ownermenu = `
 ╭───❮ *𝙾𝚆𝙽𝙴𝚁 𝙼𝙴𝙽𝚄* ❯
-│ _.*on/off* public_
-│ _.*on/off* autoreact_
-│ _.fullpp_
-│ _.update_
-│ _.setsudo_
-│ _.dltsudo_
-│ _.autoadmin_
-│ _.left_
-│ _.banchat_
-│ _.unbanchat_
-│ _.ban_
-│ _.unban_
-│ _.banlist_
-│ _.block_
-│ _.unblock_
-│ _.blocklist_
-│ _.bc_
-│ _.bcgc_
-│ _.join_ 
-│ _.restart_
-│ _.setpp_
-│ _.setprefix_
-│ _.resetprefix_
-│ _.resetuser_
-│ _.getfile_
-│ _.getplugin_
-╰─────────────⦁ `
-  
-  let funmenu = `
+│ _${usedPrefix}*on/off* public_
+│ _${usedPrefix}*on/off* autoreact_
+│ _${usedPrefix}fullpp_
+│ _${usedPrefix}update_
+│ _${usedPrefix}setsudo_
+│ _${usedPrefix}dltsudo_
+│ _${usedPrefix}autoadmin_
+│ _${usedPrefix}left_
+│ _${usedPrefix}banchat_
+│ _${usedPrefix}unbanchat_
+│ _${usedPrefix}ban_
+│ _${usedPrefix}unban_
+│ _${usedPrefix}banlist_
+│ _${usedPrefix}block_
+│ _${usedPrefix}unblock_
+│ _${usedPrefix}blocklist_
+│ _${usedPrefix}bc_
+│ _${usedPrefix}bcgc_
+│ _${usedPrefix}join_ 
+│ _${usedPrefix}restart_
+│ _${usedPrefix}setpp_
+│ _${usedPrefix}setprefix_
+│ _${usedPrefix}resetprefix_
+│ _${usedPrefix}resetuser_
+│ _${usedPrefix}getfile_
+│ _${usedPrefix}getplugin_
+╰─────────────⦁
+${readMore} 
+╭───❮ *𝙶𝚁𝙾𝚄𝙿 𝙼𝙴𝙽𝚄* ❯
+│ _${usedPrefix}kick *@tag*_
+│ _${usedPrefix}promote *@tag*_
+│ _${usedPrefix}demote *@tag*_
+│ _${usedPrefix}infogroup_
+│ _${usedPrefix}getbio *@tag*_
+│ _${usedPrefix}resetlink_
+│ _${usedPrefix}link_
+│ _${usedPrefix}*on/off* antilink_
+│ _${usedPrefix}*on/off* antidelete_
+│ _${usedPrefix}invite_
+│ _${usedPrefix}setppgc *image*_
+│ _${usedPrefix}setname *text*_
+│ _${usedPrefix}setdesc *text*_
+│ _${usedPrefix}setwelcome *text*_
+│ _${usedPrefix}setbye *text*_
+│ _${usedPrefix}hidetag *text/image/audio/vid*_
+│ _${usedPrefix}warn *@tag*_
+│ _${usedPrefix}unwarn *@tag*_
+│ _${usedPrefix}listwarn_
+│ _${usedPrefix}listnum_
+│ _${usedPrefix}kicknum_
+│ _${usedPrefix}group *open/close*_
+│ _${usedPrefix}tagall_
+╰─────────────⦁
+
 ╭───❮ *𝙵𝚄𝙽 𝙼𝙴𝙽𝚄* ❯
-│ _.hearts_
-│ _.moon_
-│ _.question_
-│ _.character_
-│ _.truth_
-│ _.dare_
-│ _.flirt_
-│ _.gay_
-│ _.meme_
-│ _.ship_
-│ _.kill_
-│ _.kiss_
-│ _.pat_
-│ _.slap_
-│ _.waste_
-│ _.simpcard_
-│ _.hornycard_
-│ _.ytcomment_
-│ _.stupid_
-│ _.lolicon_
-╰─────────────⦁`  
-  
-  let dlmenu = `
-╭───❮ *𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄* ❯
-│ _.song_
-│ _.play_
-│ _.apk_
-│ _.yts_
-│ _.insta *link*_
-│ _.img_
-│ _.pinterest_
-│ _.mediafire *link*_
-│ _.gdrive *link*_
-│ _.gitclone *link*_
-│ _.twitter *link*_
-│ _.tiktok *link*_
-│ _.tiktokstalk_
-│ _.spotify_
-│ _.fb *link*_
-╰─────────────⦁`
-  
-  let gamemenu = `
-╭───❮ *𝙶𝙰𝙼𝙴 𝙼𝙴𝙽𝚄* ❯
-│ _.tictactoe_
-│ _.delttt_
-│ _.math_
-│ _.math answer_
-│ _.ppt_
-│ _.slot_
-│ _.casino_
-╰─────────────⦁`
-  
-  let stickermenu = `
-╭───❮ *𝚂𝚃𝙸𝙲𝙺𝙴𝚁  𝙼𝙴𝙽𝚄* ❯
-│ _.sticker_
-│ _.take_
-│ _.smaker_
-│ _.getsticker_
-│ _.emix_
-│ _.attp_
-╰─────────────⦁ `
-  
-  let audiomenu = `
-╭───❮ *𝙰𝚄𝙳𝙸𝙾 𝙼𝙴𝙽𝚄* ❯
-│ _.bass_
-│ _.blown_
-│ _.deep_
-│ _.earrape_
-│ _.fat_
-│ _.fast_
-│ _.nightcore_
-│ _.reverse_
-│ _.squrrel_
-│ _.slow_
-╰─────────────⦁`
- 
-  let convertermenu = `
-╭───❮ *𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 𝙼𝙴𝙽𝚄* ❯
-│ _.toanime_
-│ _.tomp3_
-│ _.toimg_
-│ _.tovid_
-╰─────────────⦁`
+│_${usedPrefix}character_
+│_${usedPrefix}truth_
+│_${usedPrefix}dare_
+│_${usedPrefix}flirt_
+│_${usedPrefix}gay_
+│_${usedPrefix}shayeri_
+│_${usedPrefix}ship_
+│_${usedPrefix}waste_
+│_${usedPrefix}simpcard_
+│_${usedPrefix}hornycard_
+│_${usedPrefix}ytcomment_
+│_${usedPrefix}stupid_
+│_${usedPrefix}lolicon_
+╰─────────────⦁
 
-  let economy = `
+╭───❮ *𝙳𝙻 𝙼𝙴𝙽𝚄* ❯
+│_${usedPrefix}play_
+│_${usedPrefix}song_
+│_${usedPrefix}yta <link>_
+│_${usedPrefix}ytv <link>_
+│_${usedPrefix}ytmp3 <link>_
+│_${usedPrefix}ytmp4 <link>_
+│_${usedPrefix}gimage_
+│_${usedPrefix}pinterest_
+│_${usedPrefix}mediafire <link>_
+│_${usedPrefix}gdrive <link>_
+│_${usedPrefix}gitclone <link>_
+│_${usedPrefix}twitter <link>_
+│_${usedPrefix}tiktok <link>_
+│_${usedPrefix}tiktokstalk_
+│_${usedPrefix}instagram <link>_
+│_${usedPrefix}spotify_
+│_${usedPrefix}facebook <link>_
+╰─────────────⦁
+
 ╭───❮ *𝙴𝙲𝙾𝙽𝙾𝙼𝚈 𝙼𝙴𝙽𝚄* ❯
-│ _.claim/daily_
-│ _.weekly_
-│ _.monthly_
-│ _.leaderboard_
-│ _.bet_
-│ _.heal_
-│ _.craft_
-│ _.balance_
-│ _.shop_
-│ _.sell_
-│ _.adventure_
-│ _.opencrate_
-│ _.mine_
-│ _.work_
-│ _.transfer_
-│ _.todiamond_
-│ _.tomoney_
-╰─────────────⦁`
-  let animemenu = `
-╭───❮ *𝙰𝙽𝙸𝙼𝙴 𝙼𝙴𝙽𝚄* ❯
-│ _.waifu_
-│ _.neko_
-│ _.loli_
-│ _.naruto_
-│ _.itachi_
-│ _.akira_
-│ _.asuna_
-│ _.akiyama_
-│ _.boruto_
-│ _.hornycard_
-│ _.ayuzawa_
-│ _.anna_
-│ _.chiho_
-│ _.chitoge_
-│ _.deidara_
-│ _.erza_
-│ _.elaina_
-│ _.emilia_
-│ _.hestia_
-│ _.hinata_
-│ _.inori_
-│ _.isuzu_
-│ _.kagura_
-│ _.kaori_
-│ _.keneki_
-│ _.kurumi_
-│ _.madara_
-│ _.mikasa_
-│ _.miku_
-│ _.minato_
-│ _.nezuko_
-│ _.sagiri_
-│ _.sasuke_
-│ _.sakura_
-│ _.kotori_
-╰─────────────⦁`
-  let nsfwmenu = `
-╭───❮ *𝙽𝚂𝙵𝚆 𝙼𝙴𝙽𝚄* ❯
-│ _.on nsfw_
-│ _.off nsfw_
-│ _.hentais *text*_
-│ _.xnxxdl *link*_
-╰────────────⦁`
-  
-  let toolsmenu = `
-╭───❮ *𝚃𝙾𝙾𝙻𝚂 𝙼𝙴𝙽𝚄* ❯
-│ _.autosticker_
-│ _.pdf_
-│ _.whatmusic_
-│ _.tempmail_
-│ _.checkmail_
-│ _.pokedex_
-│ _.calc_
-│ _.google_
-│ _.lyrics_
-│ _.readmore_
-│ _.ssweb_
-│ _.tts_
-│ _.trt_
-│ _.wiki_
-│ _.nowa_
-│ _.qrmaker_
-│ _.true_
-│ _.fancy_
-│ _.weather_
-│ _.alexa_
-│ _.itunes_
-│ _.technews_
-╰─────────────⦁`
-  
-  let Randommenu = `
+│ _${usedPrefix}claim/daily_
+│ _${usedPrefix}weekly_
+│ _${usedPrefix}monthly_
+│ _${usedPrefix}leaderboard_
+│ _${usedPrefix}bet_
+│ _${usedPrefix}heal_
+│ _${usedPrefix}craft_
+│ _${usedPrefix}balance_
+│ _${usedPrefix}shop_
+│ _${usedPrefix}sell_
+│ _${usedPrefix}adventure_
+│ _${usedPrefix}opencrate_
+│ _${usedPrefix}mine_
+│ _${usedPrefix}work_
+│ _${usedPrefix}transfer_
+│ _${usedPrefix}todiamond_
+│ _${usedPrefix}tomoney_
+╰─────────────⦁
+
+╭───❮ *𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 𝙼𝙴𝙽𝚄* ❯
+│ _${usedPrefix}toanime_
+│ _${usedPrefix}tomp3_
+│ _${usedPrefix}toimg_
+│ _${usedPrefix}tovid_
+╰─────────────⦁
+
 ╭───❮ *𝚁𝙰𝙽𝙳𝙾𝙼 𝙼𝙴𝙽𝚄* ❯
-│ _.bts_
-│ _.cr7_
-│ _.cat_
-│ _.coffee_
-│ _.cartoon_
-│ _.cyberspace_
-│ _.couplepp_
-│ _.dog_
-│ _.doraemon_
-│ _.ff_
-│ _.hacker_
-│ _.messi_
-│ _.pubg_
-│ _.pentol_
-│ _.planet_
-│ _.tech_
-│ _.wpmountain_
-│ _.wpgaming_
-│ _.wprandom_
-╰─────────────⦁`  
+│ _${usedPrefix}bts_
+│ _${usedPrefix}cr7_
+│ _${usedPrefix}cat_
+│ _${usedPrefix}coffee_
+│ _${usedPrefix}cartoon_
+│ _${usedPrefix}cyberspace_
+│ _${usedPrefix}couplepp_
+│ _${usedPrefix}dog_
+│ _${usedPrefix}doraemon_
+│ _${usedPrefix}ff_
+│ _${usedPrefix}hacker_
+│ _${usedPrefix}messi_
+│ _${usedPrefix}pubg_
+│ _${usedPrefix}pentol_
+│ _${usedPrefix}planet_
+│ _${usedPrefix}tech_
+│ _${usedPrefix}wpmountain_
+│ _${usedPrefix}wpgaming_
+│ _${usedPrefix}wprandom_
+╰─────────────⦁
 
-  let botmenu = `
-╭───❮ *𝙱𝙾𝚃 𝙼𝙴𝙽𝚄* ❯
-│ _.ping_
-│ _.uptime_
-│ _.enable_
-│ _.alive_
-│ _.owner_
-│ _.report_
-│ _.bot_
-│ _.script_
-│ _.runtime_
-│ _.infobot_
-│ _.donate_
-│ _.groups_
-│ _.blocklist_
-│ _.listprem_
-╰─────────────⦁`
+╭───❮ *𝙰𝚄𝙳𝙸𝙾 𝙼𝙴𝙽𝚄* ❯
+│ _${usedPrefix}bass_
+│ _${usedPrefix}blown_
+│ _${usedPrefix}deep_
+│ _${usedPrefix}earrape_
+│ _${usedPrefix}fat_
+│ _${usedPrefix}fast_
+│ _${usedPrefix}nightcore_
+│ _${usedPrefix}reverse_
+│ _${usedPrefix}squrrel_
+│ _${usedPrefix}slow_
+╰─────────────⦁
 
-  const handler = async (m, {
-    conn,
-    command,
-    text,
-    args,
-    usedPrefix
-  }) => {
-    
-  
-   let glb = global.db.data.users
-   let usrs = glb[m.sender]
-   let tag = `@${m.sender.split("@")[0]}`
-   let mode = global.opts["self"] ? "Private" : "Public"
-   
-   let {
-  age,
-  exp,
-  limit,
-  level,
-  role,
-  registered,
-  credit
-   } = glb[m.sender]
-   let {
-  min,
-  xp,
-  max
-   } = xpRange(level, global.multiplier)
-   let name = await conn.getName(m.sender)
-   let premium = glb[m.sender].premiumTime
-   let prems = `${premium > 0 ? "Premium": "Free"}`
-   let platform = os.platform()
-  
-  
-   let ucpn = `${ucapan()}`
-  
-   let _uptime = process.uptime() * 1000
-   let _muptime
-   if (process.send) {
-  process.send("uptime")
-  _muptime = await new Promise(resolve => {
-  process.once("message", resolve)
-  setTimeout(resolve, 1000)
-  }) * 1000
-   }
-   let muptime = clockString(_muptime)
-   let uptime = clockString(_uptime)
-  
-   
-   let totalfeatures = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
-   let totalreg = Object.keys(glb).length
-  
-    conn.gurumenu = conn.gurumenu ? conn.gurumenu : {};
-    
-   
-    global.fcontact = { key: { fromMe: false, participant: `0@s.whatsapp.net`, remoteJid: 'status@broadcast' }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
-    const infoText = `┏─╴[ *QUEEN ANNA* ] ──┓
-│ 𝐂𝐫𝐞𝐚𝐭𝐨𝐫 : *@24105114159*
-│ 𝐁𝐨𝐭 : *Qᴜᴇᴇɴ-ᴀɴɴᴀ*
-│ 𝐌𝐨𝐝𝐞 : *${mode}* 
-│ 𝐓𝐢𝐦𝐞 : *${muptime}*
-│ 𝐕𝐞𝐫𝐬𝐢 : *1.0*
-┗──────────────────┛${readMore}
-  ┏────╴[ *INFO* ] ─────┓ 
-   *Rᴇᴘʟʏ ᴡɪᴛʜ ᴛʜᴇ   ɴᴜᴍʙᴇʀ*
-  *ᴛᴏ ɢᴇᴛ ᴍᴇɴᴜ*
-  ┗───────────────┛  
-  ┏──⟬ *ᴀʟʟ ᴍᴇɴᴜs* ⟭
-  ││ᯤ   *1.* ʙᴏᴛ ᴍᴇɴᴜ
-  ││ᯤ  *2.* ᴏᴡɴᴇʀ ᴍᴇɴᴜ
-  ││ᯤ *3.* ɢʀᴏᴜᴘ ᴍᴇɴᴜ
-  ││ᯤ  *4.* ғᴜɴ ᴍᴇɴᴜ
-  ││ᯤ  *5.* ᴀɴɪᴍᴇ ᴍᴇɴᴜ
-  ││ᯤ *6.* ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ᴍᴇɴᴜ
-  ││ᯤ  *7.* ɢᴀᴍᴇ ᴍᴇɴᴜ
-  ││ᯤ  *8.* sᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ
-  ││ᯤ *9.* ᴀᴜᴅɪᴏ ᴍᴇɴᴜ
-  ││ᯤ  *10.* ᴄᴏɴᴠᴇʀᴛᴇʀ ᴍᴇɴᴜ
-  ││ᯤ  *11.* ᴛᴏᴏʟs ᴍᴇɴᴜ
-  ││ᯤ  *12.* ʀᴀɴᴅᴏᴍᴇ ᴍᴇɴᴜ
-  ┗───────────────┛
-  ${readMore}` 
-;
+╭───❮ *𝙰𝙽𝙸𝙼𝙴 𝙼𝙴𝙽𝚄* ❯
+│ _${usedPrefix}waifu_
+│ _${usedPrefix}neko_
+│ _${usedPrefix}loli_
+│ _${usedPrefix}naruto_
+│ _${usedPrefix}itachi_
+│ _${usedPrefix}akira_
+│ _${usedPrefix}asuna_
+│ _${usedPrefix}akiyama_
+│ _${usedPrefix}boruto_
+│ _${usedPrefix}hornycard_
+│ _${usedPrefix}ayuzawa_
+│ _${usedPrefix}anna_
+│ _${usedPrefix}chiho_
+│ _${usedPrefix}chitoge_
+│ _${usedPrefix}deidara_
+│ _${usedPrefix}erza_
+│ _${usedPrefix}elaina_
+│ _${usedPrefix}emilia_
+│ _${usedPrefix}hestia_
+│ _${usedPrefix}hinata_
+│ _${usedPrefix}inori_
+│ _${usedPrefix}isuzu_
+│ _${usedPrefix}kagura_
+│ _${usedPrefix}kaori_
+│ _${usedPrefix}keneki_
+│ _${usedPrefix}kurumi_
+│ _${usedPrefix}madara_
+│ _${usedPrefix}mikasa_
+│ _${usedPrefix}miku_
+│ _${usedPrefix}minato_
+│ _${usedPrefix}nezuko_
+│ _${usedPrefix}sagiri_
+│ _${usedPrefix}sasuke_
+│ _${usedPrefix}sakura_
+│ _${usedPrefix}kotori_
+╰─────────────⦁
 
-  
-  const { result, key, timeout } = await conn.sendMessage(m.chat, { image: { url: "https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg" }, caption: infoText.trim(),  gifPlayback: true,
-  gifAttribution: 0}, { quoted: fcontact })
-  
-  // Save the menu options to gurumenu
-  conn.gurumenu[m.sender] = {
-    result,
-    key,
-    timeout: setTimeout(() => {
-      conn.sendMessage(m.chat, {
-          delete: key
-      });
-      delete conn.gurumenu[m.sender];
-  }, 60 * 1000),
-  };
-  };
-  
- 
-  handler.before = async (m, { conn }) => {
-    conn.gurumenu = conn.gurumenu ? conn.gurumenu : {};
-    if (m.isBaileys || !(m.sender in conn.gurumenu)) return;
-    const { result, key, timeout } = conn.gurumenu[m.sender];
-    if (!m.quoted || m.quoted.id !== key.id || !m.text) return;
-    const choice = m.text.trim();
-    
-    if (choice === "1") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: botmenu
-      }, { quoted:fcontact });
-      } else if (choice === "2") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: ownermenu
-      }, { quoted:fcontact });
-      } else if (choice === "3") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: groupmenu
-      }, { quoted:fcontact });
-      } else if (choice === "4") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: funmenu
-      }, { quoted:fcontact });
-      } else if (choice === "5") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: animemenu
-      }, { quoted:fcontact });
-      } else if (choice === "6") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: downloadmenu
-      }, { quoted:fcontact });
-      } else if (choice === "7") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: gamemenu
-      }, { quoted:fcontact });
-      } else if (choice === "8") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: stickermenu
-      }, { quoted:fcontact });
-      } else if (choice === "9") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: audiomenu
-      }, { quoted:fcontact });
-      } else if (choice === "10") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: convertemenu
-      }, { quoted:fcontact });
-      } else if (choice === "11") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: toolsmenu
-      }, { quoted:fcontact });
-      } else if (choice === "12") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-        caption: randomemenu
-      }, { quoted:fcontact });
-      } else if (choice === "13") {
-        await conn.sendMessage(m.chat, { image: { url: 'https://raw.githubusercontent.com/toge012345/QUEEN-ANNA/main/Assets/ANNA.jpg' },
-      } else {
-        m.reply('Invalid choice. Please reply with a valid number.');
-      }
-  
-  };
-  
-  
-  handler.help = ["play"];
-  handler.tags = ["downloader"];
-  handler.command = /^(menu2)$/i;
-  handler.limit = true;
-  export default handler;
-  
-  
-  
-  
-  function pickRandom(list) {
-    return list[Math.floor(Math.random() * list.length)]
-   }
-   
-   const more = String.fromCharCode(8206)
-   const readMore = more.repeat(4001)
-   
-   function clockString(ms) {
-    let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000)
-    let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60
-    let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60
-    return [h, " H ", m, " M ", s, " S "].map(v => v.toString().padStart(2, 0)).join("")
-   }
-   
-   function clockStringP(ms) {
-    let ye = isNaN(ms) ? "--" : Math.floor(ms / 31104000000) % 10
-    let mo = isNaN(ms) ? "--" : Math.floor(ms / 2592000000) % 12
-    let d = isNaN(ms) ? "--" : Math.floor(ms / 86400000) % 30
-    let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000) % 24
-    let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60
-    let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60
-    return [ye, " *Years 🗓️*\n", mo, " *Month 🌙*\n", d, " *Days ☀️*\n", h, " *Hours 🕐*\n", m, " *Minute ⏰*\n", s, " *Second ⏱️*"].map(v => v.toString().padStart(2, 0)).join("")
-   }
-   
-   function ucapan() {
-    const time = moment.tz("Asia/Kolkata").format("HH")
-    let res = "Good morning ☀️"
-    if (time >= 4) {
-     res = "Good Morning 🌄"
-    }
-    if (time >= 10) {
-     res = "Good Afternoon ☀️"
-    }
-    if (time >= 15) {
-     res = "Good Afternoon 🌇"
-    }
-    if (time >= 18) {
-     res = "Good Night 🌙"
-    }
-    return res
-   }
+╭───❮ *𝙶𝙰𝙼𝙴 𝙼𝙴𝙽𝚄* ❯
+│ _${usedPrefix}tictactoe_
+│ _${usedPrefix}delttt_
+│ _${usedPrefix}math_
+│ _${usedPrefix}math answer_
+│ _${usedPrefix}ppt_
+│ _${usedPrefix}slot_
+│ _${usedPrefix}casino_
+╰─────────────⦁
+
+╭───❮ *𝚂𝚃𝙸𝙲𝙺𝙴𝚁  𝙼𝙴𝙽𝚄* ❯
+│ _${usedPrefix}sticker_
+│ _${usedPrefix}take_
+│ _${usedPrefix}smaker_
+│ _${usedPrefix}getsticker_
+│ _${usedPrefix}emix_
+│ _${usedPrefix}attp_
+╰─────────────⦁
+
+╭───❮ *𝚃𝙾𝙾𝙻𝚂 𝙼𝙴𝙽𝚄* ❯
+│ _${usedPrefix}autosticker_
+│ _${usedPrefix}pdf_
+│ _${usedPrefix}whatmusic_
+│ _${usedPrefix}tempmail_
+│ _${usedPrefix}checkmail_
+│ _${usedPrefix}pokedex_
+│ _${usedPrefix}calc_
+│ _${usedPrefix}google_
+│ _${usedPrefix}lyrics_
+│ _${usedPrefix}readmore_
+│ _${usedPrefix}ssweb_
+│ _${usedPrefix}tts_
+│ _${usedPrefix}trt_
+│ _${usedPrefix}wiki_
+│ _${usedPrefix}nowa_
+│ _${usedPrefix}qrmaker_
+│ _${usedPrefix}true_
+│ _${usedPrefix}fancy_
+│ _${usedPrefix}weather_
+│ _${usedPrefix}alexa_
+│ _${usedPrefix}itunes_
+│ _${usedPrefix}technews_
+╰─────────────⦁
+
+╭───❮ *𝙽𝚂𝙵𝚆* ❯
+│_${usedPrefix}genshin_
+│_${usedPrefix}swimsuit_
+│_${usedPrefix}schoolswimsuit_
+│_${usedPrefix}white_
+│_${usedPrefix}barefoot_
+│_${usedPrefix}touhou_
+│_${usedPrefix}gamecg_
+│_${usedPrefix}hololive_
+│_${usedPrefix}uncensored_
+│_${usedPrefix}sunglasses_
+│_${usedPrefix}glasses_
+│_${usedPrefix}weapon_
+│_${usedPrefix}shirtlift_
+│_${usedPrefix}chain_
+│_${usedPrefix}fingering_
+│_${usedPrefix}flatchest_
+│_${usedPrefix}torncloth_
+│_${usedPrefix}bondage_
+│_${usedPrefix}demon_
+│_${usedPrefix}wet_
+│_${usedPrefix}pantypull_
+│_${usedPrefix}headdress_
+│_${usedPrefix}headphone_
+│_${usedPrefix}tie_
+│_${usedPrefix}anusview_
+│_${usedPrefix}shorts_
+│_${usedPrefix}stokings_
+│_${usedPrefix}topless_
+│_${usedPrefix}beach_
+│_${usedPrefix}bunnygirl_
+│_${usedPrefix}bunnyear_
+│_${usedPrefix}idol_
+│_${usedPrefix}vampire_
+│_${usedPrefix}gun_
+│_${usedPrefix}maid_
+│_${usedPrefix}bra_
+│_${usedPrefix}nobra_
+│_${usedPrefix}bikini_
+│_${usedPrefix}whitehair_
+│_${usedPrefix}blonde_
+│_${usedPrefix}pinkhair_
+│_${usedPrefix}bed_
+│_${usedPrefix}ponytail_
+│_${usedPrefix}nude_
+│_${usedPrefix}dress_
+│_${usedPrefix}underwear_
+│_${usedPrefix}foxgirl_
+│_${usedPrefix}uniform_
+│_${usedPrefix}skirt_
+│_${usedPrefix}sex_
+│_${usedPrefix}sex2_
+│_${usedPrefix}sex3_
+│_${usedPrefix}breast_
+│_${usedPrefix}twintail_
+│_${usedPrefix}spreadpussy_
+│_${usedPrefix}tears_
+│_${usedPrefix}seethrough_
+│_${usedPrefix}breasthold_
+│_${usedPrefix}drunk_
+│_${usedPrefix}fateseries_
+│_${usedPrefix}spreadlegs_
+│_${usedPrefix}openshirt_
+│_${usedPrefix}headband
+│_${usedPrefix}food_
+│_${usedPrefix}close_
+│_${usedPrefix}tree_
+│_${usedPrefix}nipples_
+│_${usedPrefix}erectnipples_
+│_${usedPrefix}horns_
+│_${usedPrefix}greenhair_
+│_${usedPrefix}wolfgirl_
+│_${usedPrefix}catgirl_
+│_${usedPrefix}nsfw_
+│_${usedPrefix}ass_
+│_${usedPrefix}boobs_
+│_${usedPrefix}lesbian_
+│_${usedPrefix}pussy_
+│_${usedPrefix}pack_
+│_${usedPrefix}xvid_
+│_${usedPrefix}xnxx_
+╰─────────────⦁
+
+╭───❮ *𝙼𝙰𝚁𝙺𝙴𝚁* ❯
+│_${usedPrefix}blur_
+│_${usedPrefix}difuminar2_
+│_${usedPrefix}hornycard_
+│_${usedPrefix}hornylicense_
+│_${usedPrefix}gfx1_
+│_${usedPrefix}gfx2_
+│_${usedPrefix}gfx3_
+│_${usedPrefix}gfx4_
+│_${usedPrefix}gfx5_
+│_${usedPrefix}gfx6_
+│_${usedPrefix}gfx7_
+│_${usedPrefix}gfx8_
+│_${usedPrefix}gfx9_
+│_${usedPrefix}gfx10_
+│_${usedPrefix}gfx11_
+│_${usedPrefix}gfx12_
+│_${usedPrefix}simpcard_
+│_${usedPrefix}itssostupid_
+│_${usedPrefix}iss_
+│_${usedPrefix}stupid_
+│_${usedPrefix}tweet <comment>_
+│_${usedPrefix}lolicon_
+│_${usedPrefix}ytcomment <comment>
+╰─────────────⦁
+
+╭───❮  *𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰* ❯
+│      𝙲𝚁𝙴𝙰𝚃𝙴𝙳 𝙱𝚈
+│   𝚃𝙾𝙶𝙴 𝙸𝙽𝚄𝙼𝙰𝙺𝙸☘️
+╰────────────⦁`  
+conn.sendFile(m.chat, pp, 'perfil.jpg', lkr, m, false, { mentions: [who] })
+m.react('📃')
+}
+handler.help = ['allmenu']
+handler.tags = ['main']
+handler.command = ['allmenu', 'list'] 
+
+export default handler 
   
