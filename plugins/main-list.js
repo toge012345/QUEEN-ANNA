@@ -282,7 +282,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'nsfwmenu': 
       lkr = `
-╭───❮ *𝚗𝚜𝚏𝚠* ❯
+╭───❮ *𝙽𝚂𝙵𝚆* ❯
 │_${usedPrefix}genshin_
 │_${usedPrefix}swimsuit_
 │_${usedPrefix}schoolswimsuit_
