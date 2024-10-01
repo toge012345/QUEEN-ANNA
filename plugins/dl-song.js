@@ -8,25 +8,26 @@ import os from 'os';
 const streamPipeline = promisify(pipeline);
 
 var handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `Use example ${usedPrefix}${command} naruto blue bird`;
-  await m.react(sdc);
+  if (!text) throw `Use example ${usedPrefix}${command} Heat Waves `; // Add "music" at the end to specify that it's music.
 
-  let search = await yts(text);
-  let vid = search.videos[Math.floor(Math.random() * search.videos.length)];
-  if (!search) throw 'Video Not Found, Try Another Title';
-  let { title, thumbnail, timestamp, views, ago, url } = vid;
-  let wm = 'ABHISHEK-SER';
+  await m.reply('*⬇️𝙰𝙱𝙷𝙸𝚂𝙷𝙴𝙺-𝚂𝙴𝚁 Downloading Your Song🎧*');
 
-  let captvid = `╭──── 〔 Y O U T U B E 〕 ─⬣
-  ⬡ Title: ${title}
-  ⬡ Duration: ${timestamp}
-  ⬡ Views: ${views}
-  ⬡ Upload: ${ago}
-  ⬡ Link: ${url}
-╰────────⬣`;
+  // Add a filter to search for song-related content
+  let search = await yts(`${text} Song`);
+  if (!search.videos.length) throw 'Song Not Found, Try Another Title';
 
-  conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
+  // Get the first video from the search results
+  let vid = search.videos[0];
 
+  let { title, thumbnail, url } = vid;
+
+  // Send the search results message
+  let searchResultsMessage = `Search Results For "${text} Song":\n\n`;
+  for (let i = 0; i < search.videos.length; i++) {
+    searchResultsMessage += `${i + 1}. ${search.videos[i].title}\n`;
+  }
+
+  conn.sendMessage(m.chat, searchResultsMessage, { quoted: m });
 
   const audioStream = ytdl(url, {
     filter: 'audioonly',
@@ -42,23 +43,14 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
   // Start the download
   await streamPipeline(audioStream, writableStream);
 
+  await m.reply('*⬆️𝙰𝙱𝙷𝙸𝚂𝙷𝙴𝙺-𝚂𝙴𝚁 Uploading Your Song🎧*');
+
   let doc = {
     audio: {
       url: `${tmpDir}/${title}.mp3`
     },
     mimetype: 'audio/mp4',
-    fileName: `${title}`,
-    contextInfo: {
-      externalAdReply: {
-        showAdAttribution: true,
-        mediaType: 2,
-        mediaUrl: url,
-        title: title,
-        body: wm,
-        sourceUrl: url,
-        thumbnail: await (await conn.getFile(thumbnail)).data
-      }
-    }
+    fileName: `${title}`
   };
 
   await conn.sendMessage(m.chat, doc, { quoted: m });
@@ -73,9 +65,9 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
   });
 };
 
-handler.help = ['play'].map((v) => v + ' <query>');
+handler.help = ['song'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = /^play$/i;
+handler.command = /^song$/i;
 
 handler.exp = 0;
 handler.diamond = false;
