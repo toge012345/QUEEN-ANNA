@@ -13,8 +13,8 @@
         "node": ">=20.0.0"
     },
     "scripts": {
-        "start": "node mtaju.js",
-        "test": "node mtajubots.js"
+        "start": "node index.js",
+        "test": "node test.js"
     },
     "keywords": [
         "termux-whatsapp-bot",
