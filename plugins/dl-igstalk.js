@@ -1,44 +1,41 @@
-import axios from 'axios';
-import cheerio from 'cheerio';
 import fetch from 'node-fetch';
-const handler = async (m, {conn, args, usedPrefix, command}) => {
-  if (!args[0]) throw `*🎯 Enter The Instagram Username\n\n📌Example: ${usedPrefix + command} abhishek_ser*`;
-  const res = await igstalk(args[0].replace(/^@/, ''));
-  const res2 = await fetch(`https://api.lolhuman.xyz/api/stalkig/${args[0].replace(/^@/, '')}?apikey=${lolkeysapi}`);
-  const res3 = await res2.json();
-  const json = JSON.parse(JSON.stringify(res));
-  const iggs = `
-╭─────────────❮
-▢ *UserName:* ${json.username}
-▢ *NickName:* ${json.fullname}
-▢ *Followers:* ${json.followers}
-▢ *Following:* ${json.following}
-▢ *Post:* ${json.post}
-▢ *Link:* https://instagram.com/${json.username.replace(/^@/, '')}
-▢ *Bio:* ${json.bio}
-╰─────────────⦁`.trim();
-  const aa = `${res3.result.photo_profile || res.profile}`;
-  await conn.sendFile(m.chat, aa, 'error.jpg', iggs, m);
+
+let handler = async (m, { conn, args, text, usedPrefix, command }) => {
+  if (!args[0]) {
+    throw `✳️ Enter the Instagram Username\n\n📌Example: ${usedPrefix + command} asli_guru69`;
+  }
+  
+  try {
+    let response = await fetch(`https://www.guruapi.tech/api/igstalk?username=${args[0]}`);
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch data from API');
+    }
+
+    let res = await response.json();
+
+    let te = `
+┌──「 *STALKING* 
+▢ *🔖Name:* ${res.name} 
+▢ *🔖Username:* ${res.username}
+▢ *👥Followers:* ${res.followers}
+▢ *🫂Following:* ${res.following}
+▢ *📌Bio:* ${res.biography}
+▢ *🏝️Posts:* ${res.posts}
+▢ *🔗 Link:* https://instagram.com/${res.username.replace(/^@/, '')}
+└────────────`;
+
+    await conn.sendFile(m.chat, res.profile_picture, 'profile_picture.png', te, m);
+
+  } catch (error) {
+    console.error(error);
+    throw 'An error occurred while fetching the Instagram profile. Please try again later.';
+  }
 };
-handler.help = ['igstalk <username>'];
-handler.tags = ['internet'];
-handler.command = /^(igstalk)$/i;
+
+handler.help = ['igstalk'];
+handler.tags = ['downloader'];
+handler.command = ['igstalk'];
+
 export default handler;
 
-async function igstalk(Username) {
-  return new Promise((resolve, reject) => {
-    axios.get('https://dumpor.com/v/'+Username, {
-      headers: {'cookie': '_inst_key=SFMyNTY.g3QAAAABbQAAAAtfY3NyZl90b2tlbm0AAAAYWGhnNS1uWVNLUU81V1lzQ01MTVY2R0h1.fI2xB2dYYxmWqn7kyCKIn1baWw3b-f7QvGDfDK2WXr8', 'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'}}).then((res) => {
-      const $ = cheerio.load(res.data);
-      const result = {
-        profile: $('#user-page > div.user > div.row > div > div.user__img').attr('style').replace(/(background-image: url\(\'|\'\);)/gi, ''),
-        fullname: $('#user-page > div.user > div > div.col-md-4.col-8.my-3 > div > a > h1').text(),
-        username: $('#user-page > div.user > div > div.col-md-4.col-8.my-3 > div > h4').text(),
-        post: $('#user-page > div.user > div > div.col-md-4.col-8.my-3 > ul > li:nth-child(1)').text().replace(' Posts', ''),
-        followers: $('#user-page > div.user > div > div.col-md-4.col-8.my-3 > ul > li:nth-child(2)').text().replace(' Followers', ''),
-        following: $('#user-page > div.user > div > div.col-md-4.col-8.my-3 > ul > li:nth-child(3)').text().replace(' Following', ''),
-        bio: $('#user-page > div.user > div > div.col-md-5.my-3 > div').text()};
-      resolve(result);
-    });
-  });
-}

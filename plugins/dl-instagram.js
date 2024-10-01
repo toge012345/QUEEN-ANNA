@@ -1,24 +1,36 @@
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'
 
 let handler = async (m, { conn, usedPrefix, args, command, text }) => {
-  if (!text) throw `*🎯Give Me A Link*`;
-  m.reply(wait);
+  if (!text) throw `You need to give the URL of Any Instagram video, post, reel, image`
+  m.reply(wait)
 
-  let res;
+  let res
   try {
-    res = await fetch(`https://inrl-web.onrender.com/api/insta?url=${text}`);
+    res = await fetch(`https://api.guruapi.tech/insta/v1/igdl?url=${text}`)
   } catch (error) {
-    throw `*An Error Occurred: ${error.message}*`;
+    throw `An error occurred: ${error.message}`
   }
 
-  let api_response = await res.json();
-  if (!api_response || !api_response.result || api_response.result.length === 0) {
-    throw `*❌No Video Found Or Invalid Response From API.`;
+  let api_response = await res.json()
+
+  if (!api_response || !api_response.media) {
+    throw `No video or image found or Invalid response from API.`
   }
 
-  let cap = `_©ABHISHEK-SER_`;
+  const mediaArray = api_response.media
 
-  conn.sendFile(m.chat, api_response.result[0], 'instagram.mp4', cap, m);
+  for (const mediaData of mediaArray) {
+    const mediaType = mediaData.type
+    const mediaURL = mediaData.url
+
+    let cap = `HERE IS THE ${mediaType.toUpperCase()} >,<`
+
+    if (mediaType === 'video') {
+      conn.sendFile(m.chat, mediaURL, 'instagram.mp4', cap, m)
+    } else if (mediaType === 'photo') {
+      conn.sendFile(m.chat, mediaURL, 'instagram.jpg', cap, m)
+    }
+  }
 }
 
 handler.help = ['instagram']
