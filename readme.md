@@ -58,6 +58,12 @@ Deploy to Railway for a serverless experience and ease of use with GitHub integr
 
 ---
 
+### PANEL
+[![Deploy on Panel](https://img.shields.io/badge/Deploy%20on-Panel-FF7139?style=for-the-badge&logo=pterodactyl&logoColor=white)](https://cpanel.net/)
+
+Deploy using the Pterodactyl panel for an intuitive interface to manage multiple servers easily.
+
+
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=F70707&center=true&width=910&height=100&lines=QUEEN+ANNA" alt="Typing SVG" /></a>
@@ -65,17 +71,8 @@ Deploy to Railway for a serverless experience and ease of use with GitHub integr
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
 
-### PANEL
-[![Deploy on Panel](https://img.shields.io/badge/Deploy%20on-Panel-FF7139?style=for-the-badge&logo=pterodactyl&logoColor=white)](https://cpanel.net/)
-
-Deploy using the Pterodactyl panel for an intuitive interface to manage multiple servers easily.
-
-
 
 # 🚨WARN🚨
-𝙢𝙮 𝙗𝙤𝙩 𝙞𝙨 𝙚𝙣𝙘𝙧𝙮𝙥𝙩𝙚𝙙 𝙖𝙣𝙙 𝙥𝙧𝙤𝙩𝙚𝙘𝙩𝙚𝙙 𝙗𝙮 𝙩𝙝𝙚 𝘼𝙥𝙖𝙘𝙝𝙚-2.0 𝙡𝙞𝙘𝙚𝙣𝙨𝙚.
-</a>
-
-</p>
-
-𝙢𝙤𝙙𝙞𝙛𝙮 𝙩𝙝𝙚 𝙊𝙥𝙚𝙣 𝙎𝙤𝙪𝙧𝙘𝙚 𝙖𝙗𝙞𝙨𝙝𝙚𝙧𝙠 𝙨𝙚𝙧.
+𝐈 𝐀𝐌 𝐍𝐎𝐓 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐈𝐁𝐋𝐄 𝐅𝐎𝐑 𝐘𝐎𝐔𝐑 𝐁𝐀𝐍𝐍𝐈𝐍𝐆 𝐎𝐍 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐀𝐓 𝐘𝐎𝐔𝐑 𝐎𝐖𝐍 𝐏𝐄𝐑𝐈𝐋.
+𝐓𝐇𝐈𝐒 𝐁𝐎𝐓 𝐈𝐒 𝐄𝐍𝐂𝐑𝐘𝐏𝐓𝐄𝐃 𝐀𝐍𝐃 𝐏𝐑𝐎𝐓𝐄𝐂𝐓𝐄𝐃 𝐁𝐘 𝐓𝐇𝐄 𝐀𝐏𝐀𝐂𝐇𝐄-𝟐.𝟎 𝐋𝐈𝐂𝐄𝐍𝐒𝐄.
+𝐓𝐇𝐈𝐒 𝐁𝐎𝐓 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐍 𝐎𝐏𝐄𝐍 𝐒𝐎𝐔𝐑𝐂𝐄.
