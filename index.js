@@ -81,7 +81,7 @@ async function start(scriptName) {
     if (exitCode === 0) return;
     fs.watchFile(scriptArgs[0], () => {
       fs.unwatchFile(scriptArgs[0]);
-      start("ANNA-MD.js");
+      start("anna-core.js");
     });
   });
 
@@ -89,7 +89,7 @@ async function start(scriptName) {
     console.error(chalk.red(`Error: ${err}`));
     childProcess.kill();
     isRunning = false;
-    start('ANNA-MD.js');
+    start('anna-core.js');
   });
 
   const pluginsDir = path.join(path.dirname(currentScriptPath), "plugins");
@@ -110,17 +110,17 @@ async function start(scriptName) {
   });
 }
 
-start('ANNA-MD.js');
+start('anna-core.js');
 
 
 process.on("unhandledRejection", () => {
   console.error(chalk.red("Unhandled promise rejection. Bot will restart..."));
-  start("ANNA-MD.js");
+  start("anna-core.js");
 });
 
 
 process.on("exit", exitCode => {
   console.error(chalk.red(`Exited with code: ${exitCode}`));
   console.error(chalk.red("Bot will restart..."));
-  start("ANNA-MD.js");
+  start("anna-core.js");
 });
