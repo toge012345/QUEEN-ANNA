@@ -37,7 +37,7 @@ Deploy to Heroku for a quick and easy setup, [Create Account](https://signup.her
 ---
 
 ### REPLIT
-[![Deploy on Replit](https://img.shields.io/badge/Deploy%20on-Replit-003d2b?style=for-the-badge&logo=render&logoColor=white)](https://repl.it/github/toge012345/QUEEN-ANNA) 
+[![Deploy on Replit](https://img.shields.io/badge/Deploy%20on-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://repl.it/github/toge012345/QUEEN-ANNA) 
 
 you do not have a replit account created here [Create Account](https://replit.com/signup)
 
@@ -58,10 +58,18 @@ Deploy to Railway for a serverless experience and ease of use with GitHub integr
 
 ---
 
+<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=F70707&center=true&width=910&height=100&lines=QUEEN+ANNA" alt="Typing SVG" /></a>
+  </p>
+<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
+
+
 ### PANEL
 [![Deploy on Panel](https://img.shields.io/badge/Deploy%20on-Panel-FF7139?style=for-the-badge&logo=pterodactyl&logoColor=white)](https://cpanel.net/)
 
 Deploy using the Pterodactyl panel for an intuitive interface to manage multiple servers easily.
+
 
 
 # 🚨WARN🚨
