@@ -379,7 +379,7 @@ async function connectionUpdate(update) {
   if (connection === 'open') {
     const { jid, name } = conn.user
 
- const msg = `𝕥𝕙𝕖 𝕒𝕟𝕟𝕒 𝕓𝕠𝕥 𝕚𝕤 𝕤𝕦𝕔𝕔𝕖𝕤𝕤𝕗𝕦𝕝𝕝𝕪 𝕔𝕠𝕟𝕟𝕖𝕔𝕥𝕖𝕕 𝕡𝕝𝕖𝕒𝕤𝕖 𝕛𝕠𝕚𝕟 𝕥𝕙𝕖 𝕤𝕦𝕡𝕡𝕠𝕣𝕥 𝕘𝕣𝕠𝕦𝕡 𝕚𝕗 𝕪𝕠𝕦 𝕟𝕖𝕖𝕕 𝕙𝕖𝕝𝕡\nhttps://chat.whatsapp.com/GpsTju4MUAbJmmZhHU8zAR`
+ const msg = `𝕥𝕙𝕖 𝕒𝕟𝕟𝕒 𝕓𝕠𝕥 𝕚𝕤 𝕤𝕦𝕔𝕔𝕖𝕤𝕤𝕗𝕦𝕝𝕝𝕪 𝕔𝕠𝕟𝕟𝕖𝕔𝕥𝕖𝕕 𝕡𝕝𝕖𝕒𝕤𝕖 𝕛𝕠𝕚𝕟 𝕥𝕙𝕖 𝕤𝕦𝕡𝕡𝕠𝕣𝕥 𝕘𝕣𝕠𝕦𝕡 𝕚𝕗 𝕪𝕠𝕦 𝕟𝕖𝕖𝕕 𝕙𝕖𝕝𝕡\nhttps://chat.whatsapp.com/BASoDcE8VL01jjVaraH1Ol`
 
     await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
     
