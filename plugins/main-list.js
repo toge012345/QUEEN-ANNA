@@ -246,7 +246,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╰─────────────⦁`
       break
     case 'toolmenu':
-      lkr =. ` 
+      lkr = ` 
 ╭───❮ *𝚃𝙾𝙾𝙻𝚂 𝙼𝙴𝙽𝚄* ❯
 │ _${usedPrefix}autosticker_
 │ _${usedPrefix}pdf_
