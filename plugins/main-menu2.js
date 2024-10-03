@@ -77,39 +77,39 @@ ${readMore}
 ╰─────────────⦁
 
 ╭───❮ *𝙵𝚄𝙽 𝙼𝙴𝙽𝚄* ❯
-│_${usedPrefix}character_
-│_${usedPrefix}truth_
-│_${usedPrefix}dare_
-│_${usedPrefix}flirt_
-│_${usedPrefix}gay_
-│_${usedPrefix}shayeri_
-│_${usedPrefix}ship_
-│_${usedPrefix}waste_
-│_${usedPrefix}simpcard_
-│_${usedPrefix}hornycard_
-│_${usedPrefix}ytcomment_
-│_${usedPrefix}stupid_
-│_${usedPrefix}lolicon_
+│ _${usedPrefix}character_
+│ _${usedPrefix}truth_
+│ _${usedPrefix}dare_
+│ _${usedPrefix}flirt_
+│ _${usedPrefix}gay_
+│ _${usedPrefix}shayeri_
+│ _${usedPrefix}ship_
+│ _${usedPrefix}waste_
+│ _${usedPrefix}simpcard_
+│ _${usedPrefix}hornycard_
+│ _${usedPrefix}ytcomment_
+│ _${usedPrefix}stupid_
+│ _${usedPrefix}lolicon_
 ╰─────────────⦁
 
 ╭───❮ *𝙳𝙻 𝙼𝙴𝙽𝚄* ❯
-│_${usedPrefix}play_
-│_${usedPrefix}song_
-│_${usedPrefix}yta <link>_
-│_${usedPrefix}ytv <link>_
-│_${usedPrefix}ytmp3 <link>_
-│_${usedPrefix}ytmp4 <link>_
-│_${usedPrefix}gimage_
-│_${usedPrefix}pinterest_
-│_${usedPrefix}mediafire <link>_
-│_${usedPrefix}gdrive <link>_
-│_${usedPrefix}gitclone <link>_
-│_${usedPrefix}twitter <link>_
-│_${usedPrefix}tiktok <link>_
-│_${usedPrefix}tiktokstalk_
-│_${usedPrefix}instagram <link>_
-│_${usedPrefix}spotify_
-│_${usedPrefix}facebook <link>_
+│ _${usedPrefix}play_
+│ _${usedPrefix}song_
+│ _${usedPrefix}yta <link>_
+│ _${usedPrefix}ytv <link>_
+│ _${usedPrefix}ytmp3 <link>_
+│ _${usedPrefix}ytmp4 <link>_
+│ _${usedPrefix}gimage_
+│ _${usedPrefix}pinterest_
+│ _${usedPrefix}mediafire <link>_
+│ _${usedPrefix}gdrive <link>_
+│ _${usedPrefix}gitclone <link>_
+│ _${usedPrefix}twitter <link>_
+│ _${usedPrefix}tiktok <link>_
+│ _${usedPrefix}tiktokstalk_
+│ _${usedPrefix}instagram <link>_
+│ _${usedPrefix}spotify_
+│ _${usedPrefix}facebook <link>_
 ╰─────────────⦁
 
 ╭───❮ *𝙴𝙲𝙾𝙽𝙾𝙼𝚈 𝙼𝙴𝙽𝚄* ❯
@@ -140,18 +140,18 @@ ${readMore}
 ╰─────────────⦁
 
 ╭───❮ *𝙻𝙸𝚂𝚃 𝙼𝙴𝙽𝚄* ❯
-│_${usedPrefix}botmenu_
-│_${usedPrefix}ownermenu_
-│_${usedPrefix}groupmenu_
-│_${usedPrefix}funmenu_
-│_${usedPrefix}animemenu_
-│_${usedPrefix}dlmenu_
-│_${usedPrefix}gamemenu_
-│_${usedPrefix}logomenu_
-│_${usedPrefix}stickermenu_
-│_${usedPrefix}economymenu_
-│_${usedPrefix}nsfwmenu_
-│_${usedPrefix}toolmenu_
+│ _${usedPrefix}botmenu_
+│ _${usedPrefix}ownermenu_
+│ _${usedPrefix}groupmenu_
+│ _${usedPrefix}funmenu_
+│ _${usedPrefix}animemenu_
+│ _${usedPrefix}dlmenu_
+│ _${usedPrefix}gamemenu_
+│ _${usedPrefix}logomenu_
+│ _${usedPrefix}stickermenu_
+│ _${usedPrefix}economymenu_
+│ _${usedPrefix}nsfwmenu_
+│ _${usedPrefix}toolmenu_
 ╰─────────────⦁
 
 ╭───❮ *𝚁𝙰𝙽𝙳𝙾𝙼 𝙼𝙴𝙽𝚄* ❯
@@ -272,112 +272,112 @@ ${readMore}
 ╰─────────────⦁
 
 ╭───❮ *𝙽𝚂𝙵𝚆* ❯
-│_${usedPrefix}genshin_
-│_${usedPrefix}swimsuit_
-│_${usedPrefix}schoolswimsuit_
-│_${usedPrefix}white_
-│_${usedPrefix}barefoot_
-│_${usedPrefix}touhou_
-│_${usedPrefix}gamecg_
-│_${usedPrefix}hololive_
-│_${usedPrefix}uncensored_
-│_${usedPrefix}sunglasses_
-│_${usedPrefix}glasses_
-│_${usedPrefix}weapon_
-│_${usedPrefix}shirtlift_
-│_${usedPrefix}chain_
-│_${usedPrefix}fingering_
-│_${usedPrefix}flatchest_
-│_${usedPrefix}torncloth_
-│_${usedPrefix}bondage_
-│_${usedPrefix}demon_
-│_${usedPrefix}wet_
-│_${usedPrefix}pantypull_
-│_${usedPrefix}headdress_
-│_${usedPrefix}headphone_
-│_${usedPrefix}tie_
-│_${usedPrefix}anusview_
-│_${usedPrefix}shorts_
-│_${usedPrefix}stokings_
-│_${usedPrefix}topless_
-│_${usedPrefix}beach_
-│_${usedPrefix}bunnygirl_
-│_${usedPrefix}bunnyear_
-│_${usedPrefix}idol_
-│_${usedPrefix}vampire_
-│_${usedPrefix}gun_
-│_${usedPrefix}maid_
-│_${usedPrefix}bra_
-│_${usedPrefix}nobra_
-│_${usedPrefix}bikini_
-│_${usedPrefix}whitehair_
-│_${usedPrefix}blonde_
-│_${usedPrefix}pinkhair_
-│_${usedPrefix}bed_
-│_${usedPrefix}ponytail_
-│_${usedPrefix}nude_
-│_${usedPrefix}dress_
-│_${usedPrefix}underwear_
-│_${usedPrefix}foxgirl_
-│_${usedPrefix}uniform_
-│_${usedPrefix}skirt_
-│_${usedPrefix}sex_
-│_${usedPrefix}sex2_
-│_${usedPrefix}sex3_
-│_${usedPrefix}breast_
-│_${usedPrefix}twintail_
-│_${usedPrefix}spreadpussy_
-│_${usedPrefix}tears_
-│_${usedPrefix}seethrough_
-│_${usedPrefix}breasthold_
-│_${usedPrefix}drunk_
-│_${usedPrefix}fateseries_
-│_${usedPrefix}spreadlegs_
-│_${usedPrefix}openshirt_
-│_${usedPrefix}headband
-│_${usedPrefix}food_
-│_${usedPrefix}close_
-│_${usedPrefix}tree_
-│_${usedPrefix}nipples_
-│_${usedPrefix}erectnipples_
-│_${usedPrefix}horns_
-│_${usedPrefix}greenhair_
-│_${usedPrefix}wolfgirl_
-│_${usedPrefix}catgirl_
-│_${usedPrefix}nsfw_
-│_${usedPrefix}ass_
-│_${usedPrefix}boobs_
-│_${usedPrefix}lesbian_
-│_${usedPrefix}pussy_
-│_${usedPrefix}pack_
-│_${usedPrefix}xvid_
-│_${usedPrefix}xnxx_
+│ _${usedPrefix}genshin_
+│ _${usedPrefix}swimsuit_
+│ _${usedPrefix}schoolswimsuit_
+│ _${usedPrefix}white_
+│ _${usedPrefix}barefoot_
+│ _${usedPrefix}touhou_
+│ _${usedPrefix}gamecg_
+│ _${usedPrefix}hololive_
+│ _${usedPrefix}uncensored_
+│ _${usedPrefix}sunglasses_
+│ _${usedPrefix}glasses_
+│ _${usedPrefix}weapon_
+│ _${usedPrefix}shirtlift_
+│ _${usedPrefix}chain_
+│ _${usedPrefix}fingering_
+│ _${usedPrefix}flatchest_
+│ _${usedPrefix}torncloth_
+│ _${usedPrefix}bondage_
+│ _${usedPrefix}demon_
+│ _${usedPrefix}wet_
+│ _${usedPrefix}pantypull_
+│ _${usedPrefix}headdress_
+│ _${usedPrefix}headphone_
+│ _${usedPrefix}tie_
+│ _${usedPrefix}anusview_
+│ _${usedPrefix}shorts_
+│ _${usedPrefix}stokings_
+│ _${usedPrefix}topless_
+│ _${usedPrefix}beach_
+│ _${usedPrefix}bunnygirl_
+│ _${usedPrefix}bunnyear_
+│ _${usedPrefix}idol_
+│ _${usedPrefix}vampire_
+│ _${usedPrefix}gun_
+│ _${usedPrefix}maid_
+│ _${usedPrefix}bra_
+│ _${usedPrefix}nobra_
+│ _${usedPrefix}bikini_
+│ _${usedPrefix}whitehair_
+│ _${usedPrefix}blonde_
+│ _${usedPrefix}pinkhair_
+│ _${usedPrefix}bed_
+│ _${usedPrefix}ponytail_
+│ _${usedPrefix}nude_
+│ _${usedPrefix}dress_
+│ _${usedPrefix}underwear_
+│ _${usedPrefix}foxgirl_
+│ _${usedPrefix}uniform_
+│ _${usedPrefix}skirt_
+│ _${usedPrefix}sex_
+│ _${usedPrefix}sex2_
+│ _${usedPrefix}sex3_
+│ _${usedPrefix}breast_
+│ _${usedPrefix}twintail_
+│ _${usedPrefix}spreadpussy_
+│ _${usedPrefix}tears_
+│ _${usedPrefix}seethrough_
+│ _${usedPrefix}breasthold_
+│ _${usedPrefix}drunk_
+│ _${usedPrefix}fateseries_
+│ _${usedPrefix}spreadlegs_
+│ _${usedPrefix}openshirt_
+│ _${usedPrefix}headband
+│ _${usedPrefix}food_
+│ _${usedPrefix}close_
+│ _${usedPrefix}tree_
+│ _${usedPrefix}nipples_
+│ _${usedPrefix}erectnipples_
+│ _${usedPrefix}horns_
+│ _${usedPrefix}greenhair_
+│ _${usedPrefix}wolfgirl_
+│ _${usedPrefix}catgirl_
+│ _${usedPrefix}nsfw_
+│ _${usedPrefix}ass_
+│ _${usedPrefix}boobs_
+│ _${usedPrefix}lesbian_
+│ _${usedPrefix}pussy_
+│ _${usedPrefix}pack_
+│ _${usedPrefix}xvid_
+│ _${usedPrefix}xnxx_
 ╰─────────────⦁
 
 ╭───❮ *𝙼𝙰𝚁𝙺𝙴𝚁* ❯
-│_${usedPrefix}blur_
-│_${usedPrefix}difuminar2_
-│_${usedPrefix}hornycard_
-│_${usedPrefix}hornylicense_
-│_${usedPrefix}gfx1_
-│_${usedPrefix}gfx2_
-│_${usedPrefix}gfx3_
-│_${usedPrefix}gfx4_
-│_${usedPrefix}gfx5_
-│_${usedPrefix}gfx6_
-│_${usedPrefix}gfx7_
-│_${usedPrefix}gfx8_
-│_${usedPrefix}gfx9_
-│_${usedPrefix}gfx10_
-│_${usedPrefix}gfx11_
-│_${usedPrefix}gfx12_
-│_${usedPrefix}simpcard_
-│_${usedPrefix}itssostupid_
-│_${usedPrefix}iss_
-│_${usedPrefix}stupid_
-│_${usedPrefix}tweet <comment>_
-│_${usedPrefix}lolicon_
-│_${usedPrefix}ytcomment <comment>
+│ _${usedPrefix}blur_
+│ _${usedPrefix}difuminar2_
+│ _${usedPrefix}hornycard_
+│ _${usedPrefix}hornylicense_
+│ _${usedPrefix}gfx1_
+│ _${usedPrefix}gfx2_
+│ _${usedPrefix}gfx3_
+│ _${usedPrefix}gfx4_
+│ _${usedPrefix}gfx5_
+│ _${usedPrefix}gfx6_
+│ _${usedPrefix}gfx7_
+│ _${usedPrefix}gfx8_
+│ _${usedPrefix}gfx9_
+│ _${usedPrefix}gfx10_
+│ _${usedPrefix}gfx11_
+│ _${usedPrefix}gfx12_
+│ _${usedPrefix}simpcard_
+│ _${usedPrefix}itssostupid_
+│ _${usedPrefix}iss_
+│ _${usedPrefix}stupid_
+│ _${usedPrefix}tweet <comment>_
+│ _${usedPrefix}lolicon_
+│ _${usedPrefix}ytcomment <comment>
 ╰─────────────⦁
 
 ╭───❮  *𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙽𝙰* ❯
