@@ -45,23 +45,16 @@ let greeting = ucapan()
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
 let str = `
-┏─╴[ *QUEEN ANNA* ] ──┓
-│ 𝐂𝐫𝐞𝐚𝐭𝐨𝐫 : *@24105114159*
-│ 𝐁𝐨𝐭 : *Qᴜᴇᴇɴ-ᴀɴɴᴀ*
-│ 𝐌𝐨𝐝𝐞 : *${mode}* 
-│ 𝐓𝐢𝐦𝐞 : *${muptime}*
-│ 𝐕𝐞𝐫𝐬𝐢 : *1.0*
-┗──────────────────┛ 
-  ┏──⟬ *ᴍᴇɴᴜ* ⟭
+  ┏──⟬ *QUEEN ANNA* ⟭
   ││ᯤ ${usedPrefix}ʙᴏᴛ ᴍᴇɴᴜ
-  ││ᯤ ${usedPrefix} ᴏᴡɴᴇʀ ᴍᴇɴᴜ
+  ││ᯤ ${usedPrefix}ᴏᴡɴᴇʀ ᴍᴇɴᴜ
   ││ᯤ ${usedPrefix}ɢʀᴏᴜᴘ ᴍᴇɴᴜ
-  ││ᯤ ${usedPrefix} ғᴜɴ ᴍᴇɴᴜ
+  ││ᯤ ${usedPrefix}ғᴜɴ ᴍᴇɴᴜ
   ││ᯤ ${usedPrefix}ʀᴇᴀᴄᴛɪᴏɴ ᴍᴇɴᴜ
   ││ᯤ ${usedPrefix}ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ᴍᴇɴᴜ
   ││ᯤ ${usedPrefix}ɢᴀᴍᴇ ᴍᴇɴᴜ
-  ││ᯤ ${usedPrefix} ʟᴏɢᴏ ᴍᴇɴᴜ
-  ││ᯤ ${usedPrefix} sᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ
+  ││ᯤ ${usedPrefix}ʟᴏɢᴏ ᴍᴇɴᴜ
+  ││ᯤ ${usedPrefix}sᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ
   ││ᯤ ${usedPrefix}ᴀᴜᴅɪᴏ ᴍᴇɴᴜ
   ││ᯤ ${usedPrefix}ɴᴇᴡs ᴍᴇɴᴜ
   ││ᯤ ${usedPrefix}ᴛᴏᴏʟs ᴍᴇɴᴜ
